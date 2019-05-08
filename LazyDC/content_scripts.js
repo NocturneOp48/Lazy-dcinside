@@ -3,10 +3,24 @@
 defaultButtonCreate();
 
 // 차단하기
-go(
-    $.all('.ub-content'),
-    C.map(pipe($.find('.ub-writer'), postFilter))
-);
+!function filter() {
+    go(
+        $.all('.ub-content'),
+        C.map(pipe($.find('.ub-writer'), postFilter))
+    );
+
+
+    $('.comment_box ') && go(
+        docEl,
+        $.on('click', e => {
+            setTimeout(filter, 0);
+        })
+    );
+
+
+
+}();
+
 
 // 버튼별 동작
 !function recur() {
