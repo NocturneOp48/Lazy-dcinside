@@ -8,8 +8,8 @@ const rPickButton = `<button type="button" class="list_bottom btn_white" id="rPi
 const rPickStartButton = `<button type="button" class="list_bottom btn_white" id="rPickStart">추첨시작</button>`;
 
 const defaultButtonCreate = (_, _2) => {
-    if(!_) filterToggleButton();
-    if(!_2) editToggleButton();
+    !_ && filterToggleButton();
+    !_2 && editToggleButton();
     rPickToggleButton();
 };
 
@@ -144,7 +144,7 @@ const selectView = e => new Promise((resolve, reject) => {
         $.on('click', e => {
             $.remove($('#edit'));
             $.remove($('#done'));
-            if($('#rPick')) $.remove($('#rPick'))
+            $('#rPick') && $.remove($('#rPick'))
             $.remove(e.target);
             C.map($.removeClass('redBox'), $.all('.redBox'));
             C.map($.remove, $.all('.banned'));
@@ -188,7 +188,7 @@ const editView = e => new Promise((resolve, reject) => {
             $.remove($('#save'));
             $.remove(e.target);
             $.remove($('.edit'));
-            if($('#rPick')) $.remove($('#rPick'));
+            $('#rPick') && $.remove($('#rPick'));
             defaultButtonCreate('filter exclude');
             resolve(null);
         })
