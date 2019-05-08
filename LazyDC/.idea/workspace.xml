@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2d6a6e51-6dd2-46f1-af30-fe7250964159" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/content_scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/customlib.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customlib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+            <state relative-caret-position="127">
+              <caret line="129" column="7" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fxjs-dom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -31,11 +40,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content_scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="272">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -80,7 +98,6 @@
       <find>toggle</find>
       <find>toggleClass</find>
       <find>match</find>
-      <find>remove</find>
       <find>id</find>
       <find>ex</find>
       <find>extend</find>
@@ -99,6 +116,9 @@
       <find>edit</find>
       <find>editView</find>
       <find>viewComments</find>
+      <find>removeClass</find>
+      <find>remove</find>
+      <find>postFil</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,10 +146,10 @@
         <option value="$PROJECT_DIR$/fx.js" />
         <option value="$PROJECT_DIR$/content_scripts.css" />
         <option value="$PROJECT_DIR$/popup.html" />
-        <option value="$PROJECT_DIR$/customlib.js" />
         <option value="$PROJECT_DIR$/popup.css" />
         <option value="$PROJECT_DIR$/filter-list.js" />
         <option value="$PROJECT_DIR$/content_scripts.js" />
+        <option value="$PROJECT_DIR$/customlib.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/manifest.json" />
       </list>
@@ -234,12 +254,17 @@
       <workItem from="1557294728286" duration="386000" />
       <workItem from="1557295245813" duration="80000" />
       <workItem from="1557295764923" duration="9000" />
-      <workItem from="1557307639239" duration="2022000" />
+      <workItem from="1557307639239" duration="2330000" />
+      <workItem from="1557313021518" duration="242000" />
+      <workItem from="1557315455611" duration="1193000" />
+      <workItem from="1557316662490" duration="14000" />
+      <workItem from="1557316680819" duration="224000" />
+      <workItem from="1557317213312" duration="1726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98095000" />
+    <option name="totallyTimeSpent" value="101802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -319,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fxjs-dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/filter-list.js" />
     <entry file="file://$PROJECT_DIR$/popup.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -345,22 +363,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content_scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="128">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fxjs-dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customlib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="171" column="7" selection-start-line="171" selection-start-column="7" selection-end-line="171" selection-end-column="7" />
+        <state relative-caret-position="127">
+          <caret line="129" column="7" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="272">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
