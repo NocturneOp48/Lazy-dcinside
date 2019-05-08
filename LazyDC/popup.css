@@ -1,0 +1,23 @@
+
+.container {
+    margin: 0;
+    text-align: center;
+    width: 100px;
+}
+
+.button-like {
+    font-family: Arial, Helvetica, san-serif;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.button-like:hover {
+    background-color:beige;
+    text-decoration: underline;
+}
+
+.button-like:link:visited {
+    text-decoration: none;
+}

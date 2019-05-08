@@ -1,0 +1,38 @@
+
+
+.redBox {border-style:solid; border-width:2px; border-color: red; opacity: 1}
+
+.container {
+
+}
+.head-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.list-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#id-list, #ip-list {
+    display: block;
+    width: 45%;
+    height: 500px;
+    margin: 10px;
+    text-decoration: none;
+
+}
+#rpick-list {
+    width: 60%;
+    height: 300px;
+    font-size: 16px;
+}
+
+#win {
+    font-family: Helvetica, san-serif;
+    margin: 10px;
+    text-align: center;
+}

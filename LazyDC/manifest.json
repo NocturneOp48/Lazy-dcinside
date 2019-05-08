@@ -1,0 +1,17 @@
+{
+   "name": "Lazy dc-inside",
+   "description": "갤질 편의기능 제공",
+   "content_scripts": [ {
+      "css" : ["./content_scripts.css"],
+      "js": [ "./fx.js" , "./fxjs-dom.js", "./customlib.js","./content_scripts.js", "./popup.js" ],
+      "matches": [ "https://gall.dcinside.com/*" ]
+   } ],
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "web_accessible_resources": ["./content_scripts.css"]
+   },
+   "permissions" : ["tabs", "storage", "https://gall.dcinside.com/*"],
+   "manifest_version": 2,
+   "version": "1.5"
+}
