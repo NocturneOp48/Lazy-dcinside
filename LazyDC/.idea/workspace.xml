@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d6a6e51-6dd2-46f1-af30-fe7250964159" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/content_scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/customlib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
@@ -29,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customlib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="489">
               <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="254" />
             </state>
           </provider>
@@ -67,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -153,10 +151,10 @@
         <option value="$PROJECT_DIR$/fx.js" />
         <option value="$PROJECT_DIR$/content_scripts.css" />
         <option value="$PROJECT_DIR$/popup.html" />
-        <option value="$PROJECT_DIR$/manifest.json" />
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/customlib.js" />
         <option value="$PROJECT_DIR$/content_scripts.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/manifest.json" />
       </list>
     </option>
   </component>
@@ -255,12 +253,12 @@
       <workItem from="1557232945929" duration="318000" />
       <workItem from="1557233328951" duration="7000" />
       <workItem from="1557274143155" duration="2338000" />
-      <workItem from="1557291549309" duration="308000" />
+      <workItem from="1557291549309" duration="379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95252000" />
+    <option name="totallyTimeSpent" value="95323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -360,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/popup.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -381,17 +372,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customlib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="254" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content_scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customlib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
