@@ -11,21 +11,21 @@ go(
 // 버튼별 동작
 !function recur() {
 
-    go(
+    $('#filter') ? go(
         $('#filter'),
         $.on('click',
             pipe(selectView, storageSet(false), recur)
         )
-    );
+    ) : null;
 
 
     // 차단 목록 편집기
-    go(
+    $('#edit') ? go(
         $('#edit'),
         $.on('click',
             pipe(editView, storageSet(true), recur)
         )
-    );
+    ) : null;
 
     // 추첨
     $('#rPick') ? go(

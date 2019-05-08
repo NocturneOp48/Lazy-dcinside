@@ -152,7 +152,7 @@ const selectView = e => new Promise((resolve, reject) => {
             resolve(null);
         })
     );
-});
+}).catch(noop);
 
 
 
@@ -194,7 +194,7 @@ const editView = e => new Promise((resolve, reject) => {
         })
     );
 
-});
+}).catch(noop);
 
 // 추첨기능
 
@@ -251,7 +251,7 @@ const rPickView = e => new Promise( resolve => {
             resolve(null);
         })
     );
-})
+}).catch(noop);
 
 // 페이지 로드 시, 차단목록 불러오기
 
