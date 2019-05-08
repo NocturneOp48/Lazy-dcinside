@@ -189,7 +189,7 @@ const editView = e => new Promise((resolve, reject) => {
             $.remove(e.target);
             $.remove($('.edit'));
             if($('#rPick')) $.remove($('#rPick'));
-            defaultButtonCreate('exclude');
+            defaultButtonCreate('filter exclude');
             resolve(null);
         })
     );
@@ -211,7 +211,7 @@ const rPickView = e => new Promise( resolve => {
                     )
         ),
         array => new Set(array),
-        set => (set.delete("댓글돌이"), set);
+        set => (set.delete("댓글돌이"), set)
     );
 
     go(
