@@ -43,16 +43,15 @@ const editToggleButton = button => {
 };
 
 const rPickToggleButton = button => {
-    if ($('.comment_box')) {
+    if ($('.cmt_nickbox')) {
         if(button) $.remove(button);
         !!(button) && button.id == 'rPick' ? (appendButton(rPickStartButton), appendButton(cancelButton)):
             (appendButton(rPickButton));
     }
 };
 
-const baseDrawElement = f => where => pipe($.el, justifyButton,f(where));
-const appendElement = baseDrawElement($.append);
-const justifyButton = el => $('.cmt_write_box') ? el : go(el, $.removeClass("list_bottom btn_white"), _ => el);
+const baseDrawElement = f => where => pipe($.el, f(where));
+const appendElement = baseDrawElement($.append)
 const appendButton = appendElement($('.left_box') ? $('.left_box') : $('.view_bottom_btnbox'));
 const beforeElement = baseDrawElement($.before);
 const afterElement = baseDrawElement($.after);
@@ -83,14 +82,14 @@ const storageSet = curry( (edited, F)  => {
 
 const postFilter = el => {
 
-    const id = el && $.attr('data-uid', el);
-    const ip = el && $.attr('data-ip', el);
+    const id = $.attr('data-uid', el);
+    const ip = $.attr('data-ip', el);
 
-    return el && ('parentNode' in el) && (el.parentNode.className == 'cmt_nickbox' ?
+    return el.parentNode.className == 'cmt_nickbox' ?
         id ? (saved.filter_id.has(id) ? $.remove(el.parentNode.parentNode.parentNode) : el)
             : (saved.filter_ip.has(ip) ? $.remove(el.parentNode.parentNode.parentNode) : el)
         : id ? (saved.filter_id.has(id) ? $.remove(el.parentNode) : el)
-            : (saved.filter_ip.has(ip) ? $.remove(el.parentNode) : el));
+            : (saved.filter_ip.has(ip) ? $.remove(el.parentNode) : el);
 };
 
 const textToArray = text => text.split(', ');
@@ -113,10 +112,11 @@ const selectView = e => new Promise((resolve, reject) => {
     filterToggleButton(e.target);
 
     go(
-        $.all('.ub-content .ub-writer'),
+        $.all('.ub-content'),
         C.map(
             pipe(
-                parent => ($.prepend(parent, $.el(`<input type="checkbox" class="banned">`)), parent),
+                $.find('.ub-writer'),
+                parent =>  ($.prepend(parent, $.el(`<input type="checkbox" class="banned">`)), parent),
                 $.delegate('click', '.banned',e => {
                     go(
                         e.delegateTarget,
@@ -203,11 +203,12 @@ const rPickView = e => new Promise( resolve => {
     rPickToggleButton(e.target);
 
     const nicknames = go(
-        $.all('.cmt_nickbox .ub-writer'),
+        $.all('.cmt_nickbox'),
         C.map(
-                    el => el && $.attr('data-ip', el) ? $.attr('data-nick', el) + "(" + $.attr('data-ip', el) + ")"
+            pipe($.find('.ub-writer'),
+                    el => $.attr('data-ip', el) ? $.attr('data-nick', el) + "(" + $.attr('data-ip', el) + ")"
                         : $.attr('data-nick', el)
-
+                    )
         ),
         array => new Set(array),
         set => (set.delete("댓글돌이"), set)
