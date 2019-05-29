@@ -1,61 +1,70 @@
-// 버튼
-const filterButton = `<button type="button" class="list_bottom btn_white" id="filter">유저차단</button>`;
-const doneButton = `<button type="button" class="list_bottom btn_white" id="done">차단완료</button>`;
-const cancelButton = `<button type="button" class="list_bottom btn_white" id="cancel">취소</button>`;
-const editButton = `<button type="button" class="list_bottom btn_white" id="edit">차단목록</button>`;
-const saveButton = `<button type="button" class="list_bottom btn_white" id="save">저장</button>`;
-const rPickButton = `<button type="button" class="list_bottom btn_white" id="rPick">추첨</button>`;
-const rPickStartButton = `<button type="button" class="list_bottom btn_white" id="rPickStart">추첨시작</button>`;
-
-const defaultButtonCreate = (_, _2) => {
-    !_ && filterToggleButton();
-    !_2 && editToggleButton();
-    rPickToggleButton();
-};
-
-const editHtml = `<div class="edit container">
-                        <div class="head-container">
+const editHtml = `<div class="edit container qp">
+                    <div class="head-container">
                         <h2>차단 id</h2> <h2>차단 ip</h2>
-                        </div>
-                        <div class="list-container">
-                        <textarea id="id-list"></textarea><textarea id="ip-list"></textarea>
-                        </div>
-                                                </div>`;
+                    </div>
+                    <div class="list-container">
+                        <textarea id="id-list"></textarea> <textarea id="ip-list"></textarea>
+                    </div>
+                  </div>`;
 
-const rPickHtml = `<div class="rPick container">
-                        <div class="head-container">
+const rPickHtml = `<div class="rPick container qp">
+                    <div class="head-container">
                         <h2>추첨 목록</h2> 
-                        </div>
-                        <div class="list-container">
+                    </div>
+                    <div class="list-container">
                         <textarea id="rpick-list"></textarea>
-                        </div></div>`;
+                    </div>
+                   </div>`;
 
-const filterToggleButton = button => {
-    if(button) $.remove(button);
-    !!(button) && button.id == 'filter' ? (appendButton(doneButton), appendButton(cancelButton)):
-        (appendButton(filterButton));
-};
 
-const editToggleButton = button => {
-    if(button) $.remove(button);
-    !!(button) && button.id == 'edit' ? (appendButton(saveButton), appendButton(cancelButton)):
-        (appendButton(editButton));
-};
 
-const rPickToggleButton = button => {
-    if ($('.comment_box')) {
-        if(button) $.remove(button);
-        !!(button) && button.id == 'rPick' ? (appendButton(rPickStartButton), appendButton(cancelButton)):
-            (appendButton(rPickButton));
-    }
-};
 
-const baseDrawElement = f => where => pipe($.el, justifyButton,f(where));
+const baseDrawElement = f => where => pipe($.el, justifyButton, f(where));
 const appendElement = baseDrawElement($.append);
 const justifyButton = el => $('.cmt_write_box') ? el : go(el, $.removeClass("list_bottom btn_white"), _ => el);
-const appendButton = appendElement($('.left_box') ? $('.left_box') : $('.view_bottom_btnbox'));
 const beforeElement = baseDrawElement($.before);
 const afterElement = baseDrawElement($.after);
+
+// 버튼
+
+const Button = {};
+
+
+Button.interface = (id, value) => `<button type="button" class="list_bottom btn_white qp" id=${id}>${value}</button>`;
+// const filterBtn = `<button type="button" class="list_bottom btn_white" id="filter">유저차단</button>`;
+Button.filter = Button.interface('filter', '유저차단');
+Button.done = Button.interface('done', '차단완료');
+Button.cancel = Button.interface('cancel', '취소');
+Button.edit = Button.interface('edit', '차단목록');
+Button.save = Button.interface('save', '저장');
+Button.rPick = Button.interface('rPick', '추첨');
+Button.rPickStart = Button.interface('rPickStart', '추첨시작');
+
+const isIterable = iter => !!iter && iter[Symbol.iterator] ;
+const eventOn = (event, f) => els => each(el => el.addEventListener(event, f) , isIterable(els) ? els : [els]);
+
+// 버튼 삭제
+Button.remove = els => go(
+    els,
+    L.reject(el => el === undefined),
+    each($.remove)
+);
+
+// 상단부 버튼 그리기. 유저차단/차단목록
+
+
+const baseMenu = where => btns => $(where) && go(
+    btns,
+    L.map(btnSel => Button[btnSel]),
+    each(appendElement($(where)))
+);
+
+const topMenu = baseMenu('.left_box');
+const btmMenu = baseMenu('.view_bottom_btnbox');
+const filterMenu = btns => baseMenu('.left_box')(btns) || baseMenu('.view_bottom_btnbox')(btns);
+const rPickMenu = baseMenu('.view_bottom_btnbox');
+
+
 const check_data = curry((set, data) => data ? set.add(data) : set);
 const baseSet = id_or_ip => (set, data) => go(data, $.attr(id_or_ip), check_data(set))
 const classify_users = users => {
@@ -108,57 +117,50 @@ const randomArray = array => array[Math.floor(Math.random() * array.length)];
 
 // 생성한 버튼에 차단 진입기 이벤트(차단목록 선택)
 
-const selectView = e => new Promise((resolve, reject) => {
+const selectView = e => new Promise((resolve) => {
 
-    filterToggleButton(e.target);
+    Button.remove($.all('.qp'));
+    filterMenu(["done", "cancel"]);
 
     go(
         $.all('.ub-content .ub-writer'),
-        C.map(
-            pipe(
-                parent => ($.prepend(parent, $.el(`<input type="checkbox" class="banned">`)), parent),
-                $.delegate('click', '.banned',e => {
-                    go(
-                        e.delegateTarget,
-                        $.toggleClass('redBox')
-                    );
-                })
-            )
+        L.map(el => ($.prepend(el, $.el(`<input type="checkbox" class="banned">`)), el)),
+        each($.delegate('click', '.banned', ({delegateTarget : dt}) => $.toggleClass('redBox', dt)))
         )
-    )
+
 
     go(
-        $('#done'),
-        $.on('click', e => {
-            go(
-                $.all('.redBox'),
-                classify_users,
-                resolve
-            );
-            window.location.reload();
-        })
+        $('#done'), $.on('click', e => {
+                go(
+                    $.all('.redBox'),
+                    classify_users,
+                    resolve
+                )
+                window.location.reload();
+            }
+        )
     );
 
     go(
         $('#cancel'),
         $.on('click', e => {
-            $.remove($('#edit'));
-            $.remove($('#done'));
-            $('#rPick') && $.remove($('#rPick'))
-            $.remove(e.target);
-            C.map($.removeClass('redBox'), $.all('.redBox'));
-            C.map($.remove, $.all('.banned'));
-            defaultButtonCreate();
-            resolve(null);
+            Button.remove($.all('.qp'));
+            topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
+            each($.removeClass('redBox'), $.all('.redBox'));
+            each($.remove, $.all('.banned'));
+            resolve(false);
         })
     );
-}).catch(noop);
+});
 
 
 
-const editView = e => new Promise((resolve, reject) => {
+const editView = e => new Promise((resolve) => {
 
-    editToggleButton(e.target);
+
+    Button.remove($.all('.qp'));
+    filterMenu(["save", "cancel"]);
+
     go(
         editHtml,
         $('.list_array_option') ? afterElement($('.list_array_option'))
@@ -172,39 +174,37 @@ const editView = e => new Promise((resolve, reject) => {
     go(
         $('#save'),
         $.on('click', e => {
-            go(
-                $('.edit'),
-                editText,
-                resolve,
-        );
-            window.location.reload();
-
-        })
+                go(
+                    $('.edit'),
+                    editText,
+                    resolve,
+                )
+                window.location.reload();
+            }
+        )
     );
 
     go(
         $('#cancel'),
         $.on('click', e => {
-            $.remove($('#save'));
-            $.remove(e.target);
-            $.remove($('.edit'));
-            $('#rPick') && $.remove($('#rPick'));
-            defaultButtonCreate('filter exclude');
-            resolve(null);
+            Button.remove($.all('.qp'));
+            topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
+            resolve(false);
         })
     );
 
-}).catch(noop);
+});
 
 // 추첨기능
 
 const rPickView = e => new Promise( resolve => {
 
-    rPickToggleButton(e.target);
+    Button.remove($.all('.qp'));
+    rPickMenu(["rPickStart", "cancel"]);
 
     const nicknames = go(
         $.all('.cmt_nickbox .ub-writer'),
-        C.map(
+        L.map(
                     el => el && $.attr('data-ip', el) ? $.attr('data-nick', el) + "(" + $.attr('data-ip', el) + ")"
                         : $.attr('data-nick', el)
 
@@ -239,18 +239,13 @@ const rPickView = e => new Promise( resolve => {
     go(
         $('#cancel'),
         $.on('click', e => {
-            $.remove($('#rPickStart'));
-            $.remove(e.target);
-            go(
-                $('.rPick'),
-                $.remove
-            );
-            C.map($.remove, $.all('#win'));
-            rPickToggleButton();
-            resolve(null);
+            Button.remove($.all('.qp'));
+            topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
+            each($.remove, $.all('#win'));
+            resolve(false);
         })
     );
-}).catch(noop);
+});
 
 // 페이지 로드 시, 차단목록 불러오기
 

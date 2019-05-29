@@ -174,6 +174,8 @@ const baseOnOff = method => (event, sel, f, ...opts) => tap(el =>
 $.on = baseOnOff('addEventListener');
 $.off = baseOnOff('removeEventListener');
 
+
+
 $.delegate = (event, sel, f) => tap(el =>
   el.addEventListener(event, e => go(
     el,
@@ -224,10 +226,15 @@ const
       body: JSON.stringify(data)
     }, fetchBaseOptF(headers))),
     resJSON));
-
+/*
 $.get = curry((url, data, headers) => go(
   fetch(url + (data === undefined ? '' : '?' + $.param(data)), fetchBaseOptF(headers)),
   resJSON
+));*/
+
+$.get = curry((url, data, headers) => go(
+    fetch(url + (data === undefined ? '' : '?' + data), fetchBaseOptF(headers)),
+    res => res.ok ? res : null
 ));
 
 $.post = fetchWithBody('POST');
