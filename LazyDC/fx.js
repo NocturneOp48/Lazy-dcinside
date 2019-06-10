@@ -46,6 +46,8 @@ function *_values(obj) {
 }
 L.values = a => hasIter(a) ? a[Symbol.iterator]() : _values(a);
 
+
+
 L.entries = function *(obj) {
   for (const k in obj) yield [k, obj[k]];
 };

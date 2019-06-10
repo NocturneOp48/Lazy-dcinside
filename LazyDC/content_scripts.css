@@ -2,9 +2,16 @@
 
 .redBox {border-style:solid; border-width:2px; border-color: red; opacity: 1}
 
-.container {
 
+.fade {
+    opacity: 0;
 }
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
 .head-container {
     display: flex;
     flex-flow: row nowrap;
@@ -36,3 +43,56 @@
     margin: 10px;
     text-align: center;
 }
+
+
+.quickView:hover {
+    background-color: transparent;
+}
+
+.quickView .writing_view_box {
+    text-align: left;
+    width: 90%;
+    font-size: 12px;
+}
+
+
+
+.cmt_write_box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.id_pw_items {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.cmt_write {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow:10;
+}
+
+.cmt_write #cmt_text {
+    height: 100%;
+    flex-grow:8;
+}
+
+.cmt_write #cmt_submit {
+
+    border: 2px outset white;
+    text-align: center;
+    font-size:10px;
+    color: white;
+    background-color: #3c4790;
+    flex-grow: 1;
+    height: 60%;
+
+}
+
+

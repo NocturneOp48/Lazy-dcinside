@@ -1,6 +1,6 @@
-const $ = sel => document.querySelector(sel);
+const $$ = sel => document.querySelector(sel);
 
-$.all = sel => document.querySelectorAll(sel);
+$$.all = sel => document.querySelectorAll(sel);
 
 const idCreator = _ => {
   var i = 0;
@@ -18,13 +18,13 @@ const baseFind = qs => curry((sel, el) => {
 });
 
 
-$.find = baseFind('querySelector');
+$$.find = baseFind('querySelector');
 
-$.findAll = baseFind('querySelectorAll');
+$$.findAll = baseFind('querySelectorAll');
 
-$.children = el => el.children;
+$$.children = el => el.children;
 
-$.closest = curry((sel, el) => el.closest(sel));
+$$.closest = curry((sel, el) => el.closest(sel));
 
 const isEl = node =>
   node && typeof node == 'object' && (node.nodeType == 1 || node.nodeType == 9);
@@ -36,12 +36,12 @@ const nextOrPrevAll = (k, add) => function f(sel, el) {
     sel = '*';
   }
   let res = [], cur = el;
-  while ((cur = cur[k])) if (isEl(cur) && $.is(sel, cur)) res[add](cur);
+  while ((cur = cur[k])) if (isEl(cur) && $$.is(sel, cur)) res[add](cur);
   return res;
 };
 
-$.prevAll = nextOrPrevAll('previousSibling', 'unshift');
-$.nextAll = nextOrPrevAll('nextSibling', 'push');
+$$.prevAll = nextOrPrevAll('previousSibling', 'unshift');
+$$.nextAll = nextOrPrevAll('nextSibling', 'push');
 
 const nextOrPrev = k => function f(sel, el) {
   if (arguments.length == 1) {
@@ -50,19 +50,19 @@ const nextOrPrev = k => function f(sel, el) {
     sel = '*';
   }
   let cur = el;
-  while ((cur = cur[k]) && (!isEl(cur) || !$.is(sel, cur))) {}
+  while ((cur = cur[k]) && (!isEl(cur) || !$$.is(sel, cur))) {}
   return cur;
 };
 
-$.prev = nextOrPrev('previousSibling');
-$.next = nextOrPrev('nextSibling');
+$$.prev = nextOrPrev('previousSibling');
+$$.next = nextOrPrev('nextSibling');
 
 const docEl = document.documentElement;
 const matches = docEl.matches || docEl.webkitMatchesSelector || docEl.mozMatchesSelector || docEl.msMatchesSelector;
 
-$.is = curry((sel, el) => el && matches.call(el, sel));
+$$.is = curry((sel, el) => el && matches.call(el, sel));
 
-$.contains = curry((parent, child) => parent.contains(child));
+$$.contains = curry((parent, child) => parent.contains(child));
 
 const
   fragmentRE = /^\s*<(\w+|!)[^>]*>/,
@@ -75,65 +75,65 @@ const
     'td': tableRow, 'th': tableRow
   };
 
-$.els = html => {
+$$.els = html => {
   html = html.trim();
   const name = fragmentRE.test(html) && RegExp.$1;
   const container = containers[name] || div;
   container.innerHTML = html;
-  return each($.remove, [...container.childNodes]);
+  return each($$.remove, [...container.childNodes]);
 
 };
 
-$.el = html => {
+$$.el = html => {
   html = html.trim();
-  return html[0] == '<' ? head($.els(html)) : document.createElement(html);
+  return html[0] == '<' ? head($$.els(html)) : document.createElement(html);
 };
 
-$.append = curry((parent, child) => parent.appendChild(child));
+$$.append = curry((parent, child) => parent.appendChild(child));
 
-$.prepend = curry((parent, child) => parent.insertBefore(child, parent.firstChild));
+$$.prepend = curry((parent, child) => parent.insertBefore(child, parent.firstChild));
 
-$.before = curry((after, before) => after.parentNode.insertBefore(before, after));
+$$.before = curry((after, before) => after.parentNode.insertBefore(before, after));
 
-$.after = curry((before, after) =>
-  before.nextSibling ? $.before(before.nextSibling, after) : $.append(before.parentNode, after));
+$$.after = curry((before, after) =>
+  before.nextSibling ? $$.before(before.nextSibling, after) : $$.append(before.parentNode, after));
 
-$.remove = el => el.parentNode.removeChild(el);
+$$.remove = el => el.parentNode.removeChild(el);
 
-$.text = el => el.textContent;
+$$.text = el => el.textContent;
 
-$.setText = $.set_text = curry((text, el) => (el.textContent = text, el));
+$$.setText = $$.set_text = curry((text, el) => (el.textContent = text, el));
 
-$.html = el => el.innerHTML;
+$$.html = el => el.innerHTML;
 
-$.setHtml = $.set_html = curry((html, el) => (el.innerHTML = html, el));
+$$.setHtml = $$.set_html = curry((html, el) => (el.innerHTML = html, el));
 
-$.outerHTML = el => el.outerHTML;
+$$.outerHTML = el => el.outerHTML;
 
-$.setOuterHTML = $.set_outer_html = curry((html, el) => el.outerHTML = html);
+$$.setOuterHTML = $$.set_outer_html = curry((html, el) => el.outerHTML = html);
 
-$.val = el => el.value;
+$$.val = el => el && el.value;
 
-$.setVal = $.set_val = curry((value, el) => (el.value = value, el));
+$$.setVal = $$.set_val = curry((value, el) => (el.value = value, el));
 
-$.attr = curry((k, el) => el.getAttribute(k));
+$$.attr = curry((k, el) => el && el.getAttribute(k));
 
 
 
-$.setAttr = $.set_attr = curry((kv, el) => (
+$$.setAttr = $$.set_attr = curry((kv, el) => (
   isArray(kv) ?
     el.setAttribute(...kv) :
     each(kv => el.setAttribute(...kv), L.entries(kv)), el));
 
-$.removeAttr = $.remove_attr = curry((k, el) => (el.removeAttribute(k), el));
+$$.removeAttr = $$.remove_attr = curry((k, el) => (el.removeAttribute(k), el));
 
 var methodClass = method => curry((class_names, el) => (
   each(cn => el.classList[method](cn), class_names.split(' ')), el
 ));
 
-$.addClass = $.add_class = methodClass('add');
-$.removeClass = $.remove_class = methodClass('remove');
-$.toggleClass = $.toggle_class = methodClass('toggle');
+$$.addClass = $$.add_class = methodClass('add');
+$$.removeClass = $$.remove_class = methodClass('remove');
+$$.toggleClass = $$.toggle_class = methodClass('toggle');
 
 function baseScroll(el, val, prop, method) {
   el = el || window;
@@ -145,15 +145,15 @@ function baseScroll(el, val, prop, method) {
   return el;
 }
 
-$.scrollTop = $.scroll_top = el => baseScroll(el, undefined, "pageYOffset", "scrollTop");
+$$.scrollTop = $$.scroll_top = el => baseScroll(el, undefined, "pageYOffset", "scrollTop");
 
-$.scrollLeft = $.scroll_left = el => baseScroll(el, undefined, "pageXOffset", "scrollLeft");
+$$.scrollLeft = $$.scroll_left = el => baseScroll(el, undefined, "pageXOffset", "scrollLeft");
 
-$.setScrollTop = $.set_scroll_top = (val, el) => baseScroll(el, val, "pageYOffset", "scrollTop");
+$$.setScrollTop = $$.set_scroll_top = (val, el) => baseScroll(el, val, "pageYOffset", "scrollTop");
 
-$.setScrollLeft = $.set_scroll_left = (val, el) => baseScroll(el, val, "pageXOffset", "scrollLeft");
+$$.setScrollLeft = $$.set_scroll_left = (val, el) => baseScroll(el, val, "pageXOffset", "scrollLeft");
 
-$.offset = el => {
+$$.offset = el => {
   const rect = el.getBoundingClientRect();
   return {
     top: rect.top + window.pageYOffset - docEl.clientTop,
@@ -167,19 +167,19 @@ const baseOnOff = method => (event, sel, f, ...opts) => tap(el =>
   !isString(sel) ?
     el[method](event, sel, ...[f, ...opts]) :
   go(el,
-    $.findAll(sel),
+    $$.findAll(sel),
     each(el => el[method](event, f, ...opts)))
 );
 
-$.on = baseOnOff('addEventListener');
-$.off = baseOnOff('removeEventListener');
+$$.on = baseOnOff('addEventListener');
+$$.off = baseOnOff('removeEventListener');
 
 
 
-$.delegate = (event, sel, f) => tap(el =>
+$$.delegate = (event, sel, f) => tap(el =>
   el.addEventListener(event, e => go(
     el,
-    $.findAll(sel),
+    $$.findAll(sel),
     filter(el => el.contains(e.target)),  //  find selected elements where event propagate by bubbling.
     each(currentTarget => { f(defaults({ originalEvent: e, currentTarget, delegateTarget: el }, e)) }) // currentTarget == each's current value
   ))
@@ -194,7 +194,7 @@ const mouseEvents = {
   mousemove: me,
 };
 
-$.trigger = function(event, props, el) {
+$$.trigger = function(event, props, el) {
   if (!el) { el = props; props = {}; }
   if (event == 'submit') return el.submit(), el;
   let e = document.createEvent(mouseEvents[event] || 'Event');
@@ -205,14 +205,33 @@ $.trigger = function(event, props, el) {
   return el;
 };
 
-$.focus = el => el.focus();
-$.blur = el => el.blur();
+$$.focus = el => el.focus();
+$$.blur = el => el.blur();
+
+
+
+
+const createPostForm = data => {
+  const formdata = new URLSearchParams();
+  go(
+      data,
+      L.entries,
+      L.reject(([_, a]) => isUndefined(a)),
+      // L.map(L.map(encodeURIComponent)),
+      map(([k, v]) => formdata.set(k, v))
+  );
+  return formdata;
+}
+
+
+const text = res => res.text();
+
 
 const
-  resJSON = res => res.ok ? res.json() : Promise.reject(res),
+  resJson = res => res.ok ? go(res, hi, text, hi, JSON.parse) : Promise.reject(res),
 
   fetchBaseOpt = {
-    headers: { "Content-Type": "application/json" },
+   // headers: {"Content-Type": "application/json", 'Access-Control-Allow-Credentials' : true},
     credentials: 'same-origin'
   },
 
@@ -223,31 +242,27 @@ const
   fetchWithBody = method => curry((url, data, headers) => go(
     fetch(url, Object.assign({
       method: method,
-      body: JSON.stringify(data)
+      body: createPostForm(data)
     }, fetchBaseOptF(headers))),
-    resJSON));
-/*
-$.get = curry((url, data, headers) => go(
-  fetch(url + (data === undefined ? '' : '?' + $.param(data)), fetchBaseOptF(headers)),
-  resJSON
-));*/
+    resJson));
 
-$.get = curry((url, data, headers) => go(
-    fetch(url + (data === undefined ? '' : '?' + data), fetchBaseOptF(headers)),
-    res => res.ok ? res : null
-));
 
-$.post = fetchWithBody('POST');
-$.put = fetchWithBody('PUT');
-$.delete = fetchWithBody('DELETE');
+$$.get = (url, data, headers = new Headers({"Accept":"text/html"})) => go(
+    fetch(  url + (data === undefined ? '' : '?' + $$.param(data)), fetchBaseOptF(headers)),
+    res => res.ok ? res.text() : Promise.reject(res)
+);
 
-$.post_form = curry((url, form_el) => go(
+$$.post = fetchWithBody('POST');
+$$.put = fetchWithBody('PUT');
+$$.delete = fetchWithBody('DELETE');
+
+$$.post_form = curry((url, form_el) => go(
   new FormData(form_el),
   form => fetch(url, { method: 'POST', body: form }),
   res => res.ok ? res.json() : Promise.reject(res),
 ));
 
-$.param = pipe(
+$$.param = pipe(
   L.entries,
   L.reject(([_, a]) => isUndefined(a)),
   L.map(map(encodeURIComponent)),
@@ -257,24 +272,24 @@ $.param = pipe(
 const dataMap = new WeakMap();
 
 
-$.setData = $.set_data = curry((data, el) => {
+$$.setData = $$.set_data = curry((data, el) => {
   dataMap.set(el, data);
   return el;
 });
 
-$.data = el => {
+$$.data = el => {
   if (dataMap.has(el)) return dataMap.get(el);
-  $.setData(JSON.parse($.attr('fxd-data', el)), el); // dataMap = { el : $.attr('fxd-data', el) (maybe undefined)}
-  $.setAttr(['fxd-data', 'IN_WEAK_MAP'], el);
+  $$.setData(JSON.parse($$.attr('fxd-data', el)), el); // dataMap = { el : $$.attr('fxd-data', el) (maybe undefined)}
+  $$.setAttr(['fxd-data', 'IN_WEAK_MAP'], el);
   return dataMap.get(el);
 };
 
 const toCamel = str => str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 
-$.css = curry((k, el) =>
+$$.css = curry((k, el) =>
   typeof k == 'string' ?
     el.style[k] || el.ownerDocument.defaultView.getComputedStyle(el, null)[toCamel(k)] :
-    object(L.map(k => [k, $.css(k, el)], k)));
+    object(L.map(k => [k, $$.css(k, el)], k)));
 
 
 var numberTypes = {
@@ -297,12 +312,12 @@ const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 
 const addPx = (k, v) => numberTypes[k] ? v : isNumeric(v) ? v + 'px' : v;
 
-$.setCss = $.set_css = curry((kv, el) => {
+$$.setCss = $$.set_css = curry((kv, el) => {
   if (isArray(kv)) {
     const k = toCamel(kv[0]);
     el.style[k] = addPx(k, kv[1]);
   } else {
-    each(kv => $.setCss(kv, el), L.entries(kv));
+    each(kv => $$.setCss(kv, el), L.entries(kv));
   }
   return el;
 });
@@ -312,16 +327,16 @@ const docWidth = (isHeight, b = document.body) =>
     Math.max(b.offsetHeight, b.scrollHeight, docEl.offsetHeight, docEl.offsetHeight, docEl.clientHeight) :
     Math.max(b.offsetWidth, b.scrollWidth, docEl.offsetWidth, docEl.offsetWidth, docEl.clientWidth);
 
-const cssF = (k, el) => parseFloat($.css(k, el)) || 0;
+const cssF = (k, el) => parseFloat($$.css(k, el)) || 0;
 
 function elWidth(el, prefix = '', isHeight) {
   if (isHeight) var width = 'height', Left = 'Top', Right = 'Bottom';
   else width = 'width', Left = 'Left', Right = 'Right';
 
-  const hide = $.css('display', el) == 'none' && $.show(el); // 안보이면 보이게 만듬
+  const hide = $$.css('display', el) == 'none' && $$.show(el); // 안보이면 보이게 만듬
 
   let res = cssF(width, el);
-  const isBorderBox = $.css('boxSizing', el) == 'border-box';
+  const isBorderBox = $$.css('boxSizing', el) == 'border-box';
   const borderBoxVal = (prefix && !isBorderBox) || (!prefix && isBorderBox) ?
     cssF('border'+Left+'Width', el) +
     cssF('border'+Right+'Width', el) +
@@ -330,17 +345,17 @@ function elWidth(el, prefix = '', isHeight) {
   res += prefix ? borderBoxVal : -borderBoxVal;
   if (prefix == 'outer') res += cssF('margin'+Left, el) + cssF('margin'+Right, el);
 
-  hide && $.hide(el);
+  hide && $$.hide(el);
 
   return res;
 }
 
-$.width = el => el == window ? el.innerWidth : el == document ? docWidth() : elWidth(el);
-$.innerWidth = $.inner_width = el => elWidth(el, 'inner');
-$.outerWidth = $.outer_width = el => elWidth(el, 'outer');
-$.height = el => el == window ? el.innerHeight : el == document ? docWidth(true) : elWidth(el, '', true);
-$.innerHeight = $.inner_height = el => elWidth(el, 'inner', true);
-$.outerHeight = $.outer_height = el => elWidth(el, 'outer', true);
+$$.width = el => el == window ? el.innerWidth : el == document ? docWidth() : elWidth(el);
+$$.innerWidth = $$.inner_width = el => elWidth(el, 'inner');
+$$.outerWidth = $$.outer_width = el => elWidth(el, 'outer');
+$$.height = el => el == window ? el.innerHeight : el == document ? docWidth(true) : elWidth(el, '', true);
+$$.innerHeight = $$.inner_height = el => elWidth(el, 'inner', true);
+$$.outerHeight = $$.outer_height = el => elWidth(el, 'outer', true);
 
 const defaultDisplays = {};
 function getDefaultDisplays(el) {
@@ -349,7 +364,7 @@ function getDefaultDisplays(el) {
 
   var temp, doc = el.ownerDocument;
   temp = doc.body.appendChild(doc.createElement(nodeName));
-  display = $.css('display', temp);
+  display = $$.css('display', temp);
   temp.parentNode.removeChild(temp);
 
   if (display == 'none') display = 'block';
@@ -358,14 +373,14 @@ function getDefaultDisplays(el) {
 
 const prevDisplays = new WeakMap();
 
-$.show = el => {
+$$.show = el => {
   if (el.style.display == 'none') el.style.display = '';
-  if ($.css('display', el) == 'none') el.style.display = getDefaultDisplays(el);
+  if ($$.css('display', el) == 'none') el.style.display = getDefaultDisplays(el);
   return el;
 };
 
-$.hide = el => {
-  const prev_display = $.css('display', el);
+$$.hide = el => {
+  const prev_display = $$.css('display', el);
   if (prev_display != 'none') {
     prevDisplays.set(el, prev_display);
     el.style.display = 'none';
@@ -373,4 +388,4 @@ $.hide = el => {
   return el;
 };
 
-$.toggle = el => $.css('display', el) == 'none' ? $.show(el) : $.hide(el);
+$$.toggle = el => $$.css('display', el) == 'none' ? $$.show(el) : $$.hide(el);
