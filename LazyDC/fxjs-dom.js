@@ -228,7 +228,7 @@ const text = res => res.text();
 
 
 const
-  resJson = res => res.ok ? go(res, hi, text, hi, JSON.parse) : Promise.reject(res),
+  resJson = res => res.ok ? go(res, text, JSON.parse) : Promise.reject(res),
 
   fetchBaseOpt = {
    // headers: {"Content-Type": "application/json", 'Access-Control-Allow-Credentials' : true},

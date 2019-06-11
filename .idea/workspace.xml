@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad88e2cf-a658-4a86-80d3-76b745cff167" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LazyDC/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/content_scripts.css" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/content_scripts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/content_scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/content_scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyDC/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/customlib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyDC/fx.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/fx.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LazyDC/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,20 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LazyDC/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12864">
-              <caret line="804" column="55" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="55" />
+            <state relative-caret-position="-2">
+              <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -41,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/test2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9952">
-              <caret line="622" column="42" selection-start-line="622" selection-start-column="42" selection-end-line="622" selection-end-column="42" />
+            <state relative-caret-position="10512">
+              <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -114,19 +106,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
+        <entry file="file://$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4000">
-              <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
+            <state relative-caret-position="64">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
+        <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="6544">
+              <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -134,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="720">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -143,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="88" column="69" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="69" />
+            <state relative-caret-position="1488">
+              <caret line="93" column="57" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -152,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4128">
-              <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
+            <state relative-caret-position="1248">
+              <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -173,26 +177,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filter</find>
-      <find>extend</find>
-      <find>sep</find>
-      <find>mergemap</find>
-      <find>L.entries</find>
-      <find>post</find>
-      <find>user-name</find>
-      <find>postfil</find>
-      <find>split</find>
-      <find>service</find>
-      <find>삭제</find>
-      <find>nick</find>
-      <find>no</find>
-      <find>strong</find>
-      <find>user_info</find>
       <find>getUR</find>
       <find>float</find>
       <find>cmt_submit</find>
@@ -201,13 +191,28 @@
       <find>formdata</find>
       <find>formadata</find>
       <find>check</find>
-      <find>hi</find>
       <find>&lt;div class=&quot;cmt_write_box clear&quot;&gt;</find>
       <find>image</find>
       <find>_svar</find>
       <find>c2VydmljZV9jb2Rl</find>
       <find>createelement</find>
       <find>createElement</find>
+      <find>title_subje</find>
+      <find>section&gt;</find>
+      <find>title_subj</find>
+      <find>&lt;form name=&quot;frm&quot;&gt;</find>
+      <find>&lt;/section&gt;</find>
+      <find>reply_length</find>
+      <find>service_code</find>
+      <find>exports</find>
+      <find>reply_len</find>
+      <find>reply</find>
+      <find>hi</find>
+      <find>post</find>
+      <find>comment_wrap</find>
+      <find>before</find>
+      <find>copy</find>
+      <find>view</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,10 +226,14 @@
         <option value="$PROJECT_DIR$/LazyDC/fx.js" />
         <option value="$PROJECT_DIR$/LazyDC/test.html" />
         <option value="$PROJECT_DIR$/LazyDC/test2.html" />
-        <option value="$PROJECT_DIR$/LazyDC/content_scripts.css" />
         <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
+        <option value="$PROJECT_DIR$/LazyDC/jquery.js" />
+        <option value="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" />
+        <option value="$PROJECT_DIR$/LazyDC/content_scripts.css" />
         <option value="$PROJECT_DIR$/LazyDC/fxjs-dom.js" />
+        <option value="$PROJECT_DIR$/LazyDC/comment.js" />
         <option value="$PROJECT_DIR$/LazyDC/content_scripts.js" />
+        <option value="$PROJECT_DIR$/LazyDC/manifest.json" />
       </list>
     </option>
   </component>
@@ -323,7 +332,11 @@
       <workItem from="1560000228553" duration="916000" />
       <workItem from="1560001205713" duration="5540000" />
       <workItem from="1560125323685" duration="445000" />
-      <workItem from="1560127192808" duration="796000" />
+      <workItem from="1560127192808" duration="3608000" />
+      <workItem from="1560143752352" duration="4148000" />
+      <workItem from="1560153060539" duration="746000" />
+      <workItem from="1560212186363" duration="1233000" />
+      <workItem from="1560219094161" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="2.2&#10;&#10;2.3은 빠른글쓰기 예정">
       <created>1559112444709</created>
@@ -332,17 +345,33 @@
       <option name="project" value="LOCAL" />
       <updated>1559112444709</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="임시저장">
+      <created>1560130509597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560130509597</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145894000" />
+    <option name="totallyTimeSpent" value="154862000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1858618" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1858618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -351,7 +380,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -367,7 +396,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.2&#10;&#10;2.3은 빠른글쓰기 예정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2&#10;&#10;2.3은 빠른글쓰기 예정" />
+    <MESSAGE value="임시저장" />
+    <option name="LAST_COMMIT_MESSAGE" value="임시저장" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
@@ -397,13 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -426,10 +449,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4000">
+          <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/test2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9952">
-          <caret line="622" column="42" selection-start-line="622" selection-start-column="42" selection-end-line="622" selection-end-column="42" />
+        <state relative-caret-position="10512">
+          <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -497,31 +541,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
+    <entry file="file://$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4000">
-          <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
+    <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="6544">
+          <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="720">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="93" column="57" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4128">
-          <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
+        <state relative-caret-position="1248">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -532,17 +586,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
+    <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="88" column="69" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+        <state relative-caret-position="128">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
         </state>
       </provider>
     </entry>
