@@ -112,11 +112,11 @@ $$.outerHTML = el => el.outerHTML;
 
 $$.setOuterHTML = $$.set_outer_html = curry((html, el) => el.outerHTML = html);
 
-$$.val = el => el && el.value;
+$$.val = el => el.value;
 
 $$.setVal = $$.set_val = curry((value, el) => (el.value = value, el));
 
-$$.attr = curry((k, el) => el && el.getAttribute(k));
+$$.attr = curry((k, el) => el.getAttribute(k));
 
 
 
@@ -208,30 +208,11 @@ $$.trigger = function(event, props, el) {
 $$.focus = el => el.focus();
 $$.blur = el => el.blur();
 
-
-
-
-const createPostForm = data => {
-  const formdata = new URLSearchParams();
-  go(
-      data,
-      L.entries,
-      L.reject(([_, a]) => isUndefined(a)),
-      // L.map(L.map(encodeURIComponent)),
-      map(([k, v]) => formdata.set(k, v))
-  );
-  return formdata;
-}
-
-
-const text = res => res.text();
-
-
 const
-  resJson = res => res.ok ? go(res, text, JSON.parse) : Promise.reject(res),
+  resJSON = res => res.ok ? go(res, text, JSON.parse) : Promise.reject(res),
 
   fetchBaseOpt = {
-   // headers: {"Content-Type": "application/json", 'Access-Control-Allow-Credentials' : true},
+    headers: { "Content-Type": "application/json" },
     credentials: 'same-origin'
   },
 
@@ -242,15 +223,19 @@ const
   fetchWithBody = method => curry((url, data, headers) => go(
     fetch(url, Object.assign({
       method: method,
-      body: createPostForm(data)
+      body: JSON.stringify(data)
     }, fetchBaseOptF(headers))),
-    resJson));
+    resJSON));
+/*
+$$.get = curry((url, data, headers) => go(
+  fetch(url + (data === undefined ? '' : '?' + $$.param(data)), fetchBaseOptF(headers)),
+  resJSON
+));*/
 
-
-$$.get = (url, data, headers = new Headers({"Accept":"text/html"})) => go(
-    fetch(  url + (data === undefined ? '' : '?' + $$.param(data)), fetchBaseOptF(headers)),
-    res => res.ok ? res.text() : Promise.reject(res)
-);
+$$.get = curry((url, data, headers) => go(
+    fetch(url + (data === undefined ? '' : '?' + data), fetchBaseOptF(headers)),
+    res => res.ok ? res : null
+));
 
 $$.post = fetchWithBody('POST');
 $$.put = fetchWithBody('PUT');

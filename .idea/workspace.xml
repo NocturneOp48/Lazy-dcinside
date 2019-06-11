@@ -5,8 +5,13 @@
       <change afterPath="$PROJECT_DIR$/LazyDC/comment.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyDC/content_scripts.css" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/content_scripts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LazyDC/_metadata/computed_hashes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LazyDC/_metadata/verified_contents.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/content_scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/content_scripts.js" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/LazyDC/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/customlib.js" afterDir="false" />
+>>>>>>> parent of 717b15e... 임시저장
       <change beforePath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/manifest.json" afterDir="false" />
     </list>
@@ -21,6 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -30,9 +36,12 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> parent of 717b15e... 임시저장
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LazyDC/test2.html">
+        <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="10512">
               <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
               <folding>
@@ -92,15 +101,19 @@
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="304">
+              <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+>>>>>>> parent of 717b15e... 임시저장
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LazyDC/customlib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="400">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -108,11 +121,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="64">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="606">
+              <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+>>>>>>> parent of 717b15e... 임시저장
             </state>
           </provider>
         </entry>
@@ -120,6 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="6544">
               <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
             </state>
@@ -140,6 +159,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
+=======
+            <state>
+              <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+>>>>>>> parent of 717b15e... 임시저장
             </state>
           </provider>
         </entry>
@@ -147,8 +170,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1488">
               <caret line="93" column="57" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="57" />
+=======
+            <state relative-caret-position="212">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
+>>>>>>> parent of 717b15e... 임시저장
             </state>
           </provider>
         </entry>
@@ -156,8 +184,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1248">
               <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
+=======
+            <state relative-caret-position="606">
+              <caret line="136" column="2" selection-start-line="136" selection-start-column="2" selection-end-line="136" selection-end-column="2" />
+>>>>>>> parent of 717b15e... 임시저장
             </state>
           </provider>
         </entry>
@@ -165,7 +198,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/WebStromProject/functional-javascript-02-master/07. 프론트엔드에서 함수형 이터러블 동시성 프로그래밍/1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3232">
+            <state relative-caret-position="1113">
               <caret line="202" column="31" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="31" />
             </state>
           </provider>
@@ -183,6 +216,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
       <find>getUR</find>
       <find>float</find>
       <find>cmt_submit</find>
@@ -213,6 +247,24 @@
       <find>before</find>
       <find>copy</find>
       <find>view</find>
+=======
+      <find>fetch</find>
+      <find>이름 좀</find>
+      <find>본문</find>
+      <find>container</find>
+      <find>귤나무</find>
+      <find>prevent</find>
+      <find>take</find>
+      <find>viewA</find>
+      <find>C.take</find>
+      <find>reduce</find>
+      <find>on</find>
+      <find>delegate</find>
+      <find>current</find>
+      <find>attr</find>
+      <find>log</find>
+      <find>select</find>
+>>>>>>> parent of 717b15e... 임시저장
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,18 +274,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/LazyDC/popup.js" />
-        <option value="$USER_HOME$/Desktop/WebStromProject/background.js" />
-        <option value="$PROJECT_DIR$/LazyDC/fx.js" />
         <option value="$PROJECT_DIR$/LazyDC/test.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/LazyDC/test2.html" />
         <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
         <option value="$PROJECT_DIR$/LazyDC/jquery.js" />
         <option value="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" />
         <option value="$PROJECT_DIR$/LazyDC/content_scripts.css" />
+=======
+        <option value="$USER_HOME$/Desktop/WebStromProject/background.js" />
+>>>>>>> parent of 717b15e... 임시저장
         <option value="$PROJECT_DIR$/LazyDC/fxjs-dom.js" />
         <option value="$PROJECT_DIR$/LazyDC/comment.js" />
         <option value="$PROJECT_DIR$/LazyDC/content_scripts.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/LazyDC/manifest.json" />
+=======
+        <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
+>>>>>>> parent of 717b15e... 임시저장
       </list>
     </option>
   </component>
@@ -248,6 +306,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,7 +323,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,6 +366,7 @@
       <workItem from="1559089040418" duration="47000" />
       <workItem from="1559089099326" duration="2308000" />
       <workItem from="1559102769326" duration="165000" />
+<<<<<<< HEAD
       <workItem from="1559102938362" duration="9981000" />
       <workItem from="1559113656942" duration="5815000" />
       <workItem from="1559189231913" duration="1179000" />
@@ -366,6 +425,14 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+=======
+      <workItem from="1559102938362" duration="9252000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="27725000" />
+>>>>>>> parent of 717b15e... 임시저장
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -382,23 +449,44 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.329927" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.2&#10;&#10;2.3은 빠른글쓰기 예정" />
     <MESSAGE value="임시저장" />
     <option name="LAST_COMMIT_MESSAGE" value="임시저장" />
   </component>
+=======
+>>>>>>> parent of 717b15e... 임시저장
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -427,6 +515,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -439,11 +528,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="978" column="32" lean-forward="true" selection-start-line="978" selection-start-column="32" selection-end-line="978" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/test.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="12864">
           <caret line="804" column="55" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="55" />
         </state>
@@ -474,30 +570,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10512">
           <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
+=======
+        <state relative-caret-position="420">
+          <caret line="563" column="34" lean-forward="true" selection-start-line="563" selection-start-column="34" selection-end-line="563" selection-end-column="34" />
+>>>>>>> parent of 717b15e... 임시저장
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#button#0;n#div#1;n#div#0;n#header#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#5;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#4;n#div#0;n#div#0;n#article#0;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#1;n#div#0;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#5;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#5;n#div#0;n#div#0;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#2;n#article#1;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#col#0;n#colgroup#0;n#table#0;n#div#0;n#article#0;n#section#0;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -512,14 +603,12 @@
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#1;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#h3#0;n#header#0;n#div#0;n#article#1;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#header#0;n#div#0;n#article#3;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#article#3;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#article#3;n#section#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#article#2;n#section#0;n#main#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -534,6 +623,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/LazyDC/customlib.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -548,32 +638,54 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="136" column="2" selection-start-line="136" selection-start-column="2" selection-end-line="136" selection-end-column="2" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="6544">
           <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
+=======
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.css">
+    <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="720">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
+=======
+        <state relative-caret-position="606">
+          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1488">
           <caret line="93" column="57" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="57" />
+=======
+        <state relative-caret-position="212">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1248">
           <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
         </state>
@@ -590,6 +702,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+=======
+        <state relative-caret-position="1113">
+          <caret line="202" column="31" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LazyDC/customlib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+>>>>>>> parent of 717b15e... 임시저장
         </state>
       </provider>
     </entry>

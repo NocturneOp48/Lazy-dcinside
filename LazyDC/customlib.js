@@ -1,34 +1,9 @@
-
-const Imgsloader = limit => tap(
-    $$.findAll('img'),
-    L.map(img => _ => new Promise(resolve => {
-        img.onload = () => resolve(img);
-        img.src = img.getAttribute('lazy-src');
-    })),
-    C.takeAllWithLimit(limit),
-    each(each($$.addClass('fade-in')))
-);
-
-const groupBySize = curry((size, iter) => {
-    let r = L.range(Infinity);
-    return groupBy(_ => Math.floor(r.next().value / size), iter);
-});
-
-C.takeAllWithLimit = curry((limit = Infinity, iter) => go(
-    iter,
-    groupBySize(limit),
-    L.values,
-    L.map(L.map(f => f())),
-    L.map(C.takeAll)));
-
-
-
 const editHtml = `<div class="edit container qp">
                     <div class="head-container">
                         <h2>차단 id</h2> <h2>차단 ip</h2>
                     </div>
                     <div class="list-container">
-                        <textarea id="id-list"></textarea>
+                        <textarea id="id-list"></textarea> <textarea id="ip-list"></textarea>
                     </div>
                   </div>`;
 
@@ -42,23 +17,6 @@ const rPickHtml = `<div class="rPick container qp">
                    </div>`;
 
 
-const esno = $$.val($$('#e_s_n_o'));
-
-
-const isIterable = iter => !!iter && iter[Symbol.iterator] ;
-
-const strRplce = str =>
-    str == "data-uid" ? "유저 ID" :
-        str == "data-ip" ? "유저 IP" :
-            str == "data-nick" ? "유저 닉네임" :
-                str == "user_name" ? "유저 이름" :
-                    ""
-const inversestrRplce = str =>
-    str == "유저 ID" ?"data-uid" :
-        str == "유저 IP" ? "data-ip" :
-            str == "유저 닉네임" ? "data-nick" :
-                str == "유저 이름" ? "user_name" :
-                    "";
 
 
 const baseDrawElement = f => where => pipe($$.el, justifyButton, f(where));
@@ -82,6 +40,8 @@ Button.save = Button.interface('save', '저장');
 Button.rPick = Button.interface('rPick', '추첨');
 Button.rPickStart = Button.interface('rPickStart', '추첨시작');
 
+const isIterable = iter => !!iter && iter[Symbol.iterator] ;
+const eventOn = (event, f) => els => each(el => el.addEventListener(event, f) , isIterable(els) ? els : [els]);
 
 // 버튼 삭제
 Button.remove = els => go(
@@ -105,68 +65,54 @@ const filterMenu = btns => baseMenu('.left_box')(btns) || baseMenu('.view_bottom
 const rPickMenu = baseMenu('.view_bottom_btnbox');
 
 
-
-// el => Map([112. 123, 'data-ip'])
-
-// const pushMap = k => (dataMap, data) => (dataMap.set(data, k), dataMap);
-// const checkAttr = (k, iter) => go(iter, L.map($$.attr(k)), L.filter(identity));
-// const makeMap_by_attr = (dataMap, els) => k => reduce(pushMap(k), dataMap, checkAttr(k, els));
-// map(makeMap_by_attr(dataMap, els), ['data-uid', 'data-ip'])
-
-//
-// const saveMap = (dataMap, data_key) => attr => (dataMap.set(attr, data_key), dataMap);
-// const classify = (f, el, data_key) => go([el], L.map($$.attr(data_key)), L.filter(identity), each(f), ([attr]) => attr);
-// const classify_saveMap = (dataMap, el) => data_key => classify(saveMap(dataMap, data_key), el, data_key);
-
-// go(
-//     ['data-uid', 'data-ip', 'data-nick', 'user-name'],
-//     L.filter(classify_saveMap(dataMap, el)),
-//     take1
-// );
-
-
-
-const classify_user = (dataMap, el) =>
-    go(
-        ['data-uid', 'data-ip', 'data-nick', 'user_name'],
-        L.filter(key => $$.attr(key, el)),
-        take1,
-        key => (dataMap.set($$.attr(key, el), key), dataMap)
-    );
-
-
-const classify_users = els => reduce(classify_user, new Map(), els);
-
+const check_data = curry((set, data) => data ? set.add(data) : set);
+const baseSet = id_or_ip => (set, data) => go(data, $$.attr(id_or_ip), check_data(set))
+const classify_users = users => {
+    const F = {};
+    F.filter_id = reduce(baseSet('data-uid'), new Set(), users);
+    F.filter_ip = reduce(baseSet('data-ip'), new Set(), users);
+    return F
+};
 
 // 이번 선택으로 추가된 Set을 원래의 Set에 추가한다.
-const mergeMap = dataMap => new Map([...saved.filter_users, ...dataMap]);
+const mergeSet = obj => {
+    const filter_id = new Set([...saved.filter_id, ...obj.filter_id]);
+    const filter_ip = new Set([...saved.filter_ip, ...obj.filter_ip]);
+    return {filter_id, filter_ip};
+};
 
 const storageSet = curry( (edited, F)  => {
     if(F) {
-        const merged = edited ? F : mergeMap(F);
-        localStorage.setItem('filter_users', JSON.stringify(object(merged)));
-        return Promise.resolve('Success');
+        const merged = edited ? F : mergeSet(F);
+        localStorage.setItem('filter_id', JSON.stringify(Array.from(merged.filter_id)));
+        localStorage.setItem('filter_ip', JSON.stringify(Array.from(merged.filter_ip)));
+        return Promise.resolve('Set Success');
     }
 });
 
-const postFilter = els => {
+const postFilter = el => {
 
-    go(
-        ['data-uid', 'data-ip', 'data-nick', 'user_name'],
-        iter => reduce((acc, key)  => [...acc, ...L.filter(el => saved.filter_users.has($$.attr(key, el)), els)], [], iter),
-        each(pipe($$.closest('.ub-content'), $$.remove))
-    )
+    const id = el && $$.attr('data-uid', el);
+    const ip = el && $$.attr('data-ip', el);
+
+    return el && ('parentNode' in el) && (el.parentNode.className == 'cmt_nickbox' ?
+        id ? (saved.filter_id.has(id) ? $$.remove(el.parentNode.parentNode.parentNode) : el)
+            : (saved.filter_ip.has(ip) ? $$.remove(el.parentNode.parentNode.parentNode) : el)
+        : id ? (saved.filter_id.has(id) ? $$.remove(el.parentNode) : el)
+            : (saved.filter_ip.has(ip) ? $$.remove(el.parentNode) : el));
 };
 
-const splitext = (sep = ',') => text => text ? text.split(sep) : [];
-const textToMap = pipe(splitext('\n'), L.map(a => a.split(":")),
-                            map(([k, v]) => [v, inversestrRplce(k)]), entries => new Map(entries));
-const checkMap = map => (map.delete(""), map.delete(undefined), map);
-const editText = el => go(el, $$.find('#id-list'), $$.val, hi, textToMap, hi, checkMap);
+const textToArray = text => text.split(', ');
+const textToSet = text => new Set(text.split('\n'));
+const checkSet = set => (set.delete(""), set);
+const editText = el => {
+    const F = {};
+    F.filter_id = go(el, $$.find('#id-list'), $$.val, textToSet, checkSet);
+    F.filter_ip = go(el, $$.find('#ip-list'), $$.val, textToSet, checkSet);
+    return F;
+};
 
 const randomArray = array => array[Math.floor(Math.random() * array.length)];
-
-
 
 
 // 생성한 버튼에 차단 진입기 이벤트(차단목록 선택)
@@ -218,15 +164,11 @@ const editView = e => new Promise((resolve) => {
     go(
         editHtml,
         $$('.list_array_option') ? afterElement($$('.list_array_option'))
-            : afterElement($$('.view_bottom_btnbox')),
-        $$.find('#id-list'),
-            $$.setVal(
-                go(
-                    saved.filter_users,
-                    map(([k, v]) => `${strRplce(v)}:${k}`)
-                ).join('\n')
-            )
-
+            : afterElement($$('.view_bottom_btnbox')) ,
+        tap($$.find('#id-list'),
+            $$.setVal([...saved.filter_id].join('\n'))),
+        tap($$.find('#ip-list'),
+            $$.setVal([...saved.filter_ip].join('\n'))),
     );
 
     go(
@@ -286,7 +228,7 @@ const rPickView = e => new Promise( resolve => {
                 $$('.rPick'),
             $$.find('#rpick-list'),
             $$.val,
-                splitext,
+                textToArray,
                 randomArray,
                 winner => `<div id="win">당첨자는 ${winner}입니다.</div>`,
                 beforeElement($$('.bottom_paging_box')),
@@ -308,4 +250,5 @@ const rPickView = e => new Promise( resolve => {
 // 페이지 로드 시, 차단목록 불러오기
 
 const saved = {};
-saved.filter_users = new Map(go(localStorage.getItem('filter_users'), JSON.parse, L.entries));
+saved.filter_id = new Set(go(localStorage.getItem('filter_id'), JSON.parse));
+saved.filter_ip = new Set(go(localStorage.getItem('filter_ip'), JSON.parse));

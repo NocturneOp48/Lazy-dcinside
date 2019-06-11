@@ -2,16 +2,9 @@
 
 .redBox {border-style:solid; border-width:2px; border-color: red; opacity: 1}
 
+.container {
 
-.fade {
-    opacity: 0;
 }
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
-
 .head-container {
     display: flex;
     flex-flow: row nowrap;
@@ -96,5 +89,4 @@
     height: 60%;
 
 }
-
 

@@ -7,8 +7,9 @@ topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
 
 // 차단하기
 !function filter() {
-
-    postFilter($$.all('.ub-content .ub-writer'));
+    go(
+        $$.all('.ub-content'), each(pipe($$.find('.ub-writer'), postFilter))
+    );
 
     $$('.comment_box ') && go(
         docEl,
@@ -162,11 +163,6 @@ topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
 
 
 
-
-    copyScript('//gall.dcinside.com/_js/comment.js');
-
-
-
     go(
         $$.all('.ub-content.us-post a'),
 
@@ -185,145 +181,63 @@ topMenu(["filter", "edit"]) || btmMenu(["filter", "edit", "rPick"]);
                        $$.append($$.find('.comment_wrap', vw), cmvw);
                    },
                 )}
-                ,qckPstLoad
             )
         )
     )
 
-    $(document).on('click','.repley_add, .repley_add_vote', function(e){
-        var formData = '';
-        var gall_id = $(document).data('comment_id') || getURLParameter("id");
-        var no = $(document).data('comment_no') || getURLParameter("no");
 
-        if(!no) {
-            no = $('#no').val();
-        }
 
-        formData += "&id=" + gall_id + "&no=" + no;
-
-        var _no = "";
-        var c_no = $(this).attr('r_idx');
-        if(c_no) { _no = c_no; formData += "&c_no=" + c_no; }
-        else if(no) { _no = no; }
-        else { _no = ""; }
-
-        var name =  $("#name_" + _no);
-        var pw =  $("#password_" + _no);
-        var memo = $("#memo_" + _no);
-        var code = $("#code_" + _no);
-
-        if(name.length > 0) {
-            if(!name.val()) {
-                alert("닉네임을 입력하세요.");
-                name.focus();
-                return false;
-            } else {
-                formData += "&name=" + name.val();
-            }
-        }
-
-        if(pw.length > 0) {
-            if (!pw.val()) {
-                alert("비밀번호을 입력하세요.");
-                pw.focus();
-                return false;
-            } else if(pw.val().length < 2) {
-                alert("비밀번호를 최소 2자리 이상 입력하셔야 합니다. 쉬운 비밀번호는 타인이 수정 또는 삭제하기 쉬우니, 어려운 비밀번호를 입력해 주세요.");
-                pw.focus();
-                return false;
-            } else {
-                formData += "&password=" + pw.val();
-            }
-        }
-
-        if(code.length > 0) {
-            if(!code.val()) {
-                alert('자동입력 방지코드를 입력해주세요.');
-                code.focus();
-                return false;
-            }else {
-                formData += "&code=" + code.val();
-            }
-        }
-
-        if(!memo.val()) {
-            alert("내용을 입력하세요.");
-            memo.focus();
-            return false;
-        }
-
-        if($("#clickbutton").val() == "Y") {
-            return false;
-        }
-
-        $("#clickbutton").val("Y");
-
-        // 등록+추천
-        if($(this).attr('class') == 'btn_lightblue small repley_add_vote') {
-            formData += "&vote=vote";
-        }
-
-        //push alram
-        var check_6		= $('#check_6').val();
-        var check_7		= $('#check_7').val();
-        var check_8		= $('#check_8').val();
-        var check_9		= $('#check_9').val();
-
-        var recommend = $('#recommend').val();
-        var csrf_token	= $('input[name=ci_t]').val();
-        var _svar = window.atob('c2VydmljZV9jb2Rl');
-
-        formData += "&memo=" + encodeURIComponent(memo.val());
-        formData += "&cur_t=" + $("#cur_t").val();
-        formData += "&check_6=" + check_6 + "&check_7=" + check_7 + "&check_8=" + check_8 + "&check_9=" + check_9;
-        formData += "&recommend=" + recommend;
-        formData += "&user_ip=" + $("#user_ip").val();
-        formData += "&t_vch2=" + $(document).data('t_vch2');
-        formData += '&'+ _svar +'='+ eval('document.'+_svar);
-
-        $.ajax({
-            type : "POST",
-            cache: false,
-            async: false,
-            url : "/board/forms/comment_submit",
-            data : formData ,
-            success : function(data) {
-                console.log(data);
-                k_cnt = 0;
-                var split_string = data.split('||');
-                $("#clickbutton").val("N");
-                if(split_string[0] == "false") {
-                    alert(split_string[1]);
-                    return false;
-                } else {
-                    console.log(typeof(setRequestNotification));
-                    if(typeof(setRequestNotification) == 'function') {
-                        setRequestNotification(gall_id, no, data);
-                    }
-
-                    memo.val("");
-                    memo.focus();
-                }
-            },
-            error : function(request,status,error) {
-                //	comment_error_log(csrf_token,gall_id,request,status,error);
-            }
-        });
-
-        if(list_type == 'album') {
-            $("#no").val(no);
-            viewComments(1,'ADD');
-        } else {
-            viewComments(1,'ADD');
-            if($("#kcaptcha_use").val() == 'Y') kcaptcha_init(_no);
-        }
-    });
 
 
 
 }();
 
 
+var reply_length_count = function(no) {
+    if(no) {
+        var memo = $("#memo_" + no);
+    } else {
+        var memo = $("#memo");
+    }
+    var cnt	= memo.val().length || 0;
+
+    if(cnt > 400) {
+        if(event.keyCode != "13"){
+            alert("글자수 제한이 있습니다.");
+        }
+
+        var ls_str2 = memo.val().substr(0, 400);
+        memo.val(ls_str2);
+        memo.focus();
+    }
+};
+
+var getURLParameter = function(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+}
+var list_type = getURLParameter("board_type");
+
+var c_key;
+
+//쿠키 저장.
+var setCookie = function(cname, cvalue, exdays, domain) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;domain=" + domain;
+};
+
+//비밀번호 입력 폼
+var getPwdInputHtml = function(type,no,mode) {
+    var html = "";
+    html += "<div id=\"cmt_delpw_box\" class=\"cmt_delpw_box\" data-type=\""+type+"\" re_no=\""+no+"\" c_mode=\""+mode+"\" style=\"margin:-16px 0 0 -242px\">";
+    html += "<input type=\"password\" title=\"비밀번호\" placeholder=\"비밀번호\" id=\"cmt_password\" class=\"cmt_delpw\">";
+    html += "<button type=\"button\" class=\"btn_ok\">확인</button>";
+    html += "<button type=\"button\" class=\"btn_cmtpw_close\"><span class=\"blind\">닫기</span><em class=\"sp_img icon_cmtpw_close\"></em></button>";
+    html += "</div>";
+
+    return html;
+};
 
 
 
