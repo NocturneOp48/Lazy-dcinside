@@ -411,13 +411,13 @@
                                             <div class="set_cont" >
                                                 <label for="bword" class="cont_tit">차단 닉네임</label>
                                                 <input type="text" id="bword" title="차단 닉네임 입력" class="intxt" value="7355608">
-                                                <button type="button" class="btn_enroll" onclick="ub_save_conf_one('aoegame','중세게임','nick',$$('#bword').val())">등록</button>
+                                                <button type="button" class="btn_enroll" onclick="ub_save_conf_one('aoegame','중세게임','nick',$('#bword').val())">등록</button>
                                             </div>
 
                                             <div class="set_cont">
                                                 <label for="bid" class="cont_tit">차단 ID</label>
                                                 <input type="text" id="bid" title="차단 ID 입력" class="intxt" value="song2064">
-                                                <button type="button" class="btn_enroll" onclick="ub_save_conf_one('aoegame','중세게임','id',$$('#bid').val())">등록</button>
+                                                <button type="button" class="btn_enroll" onclick="ub_save_conf_one('aoegame','중세게임','id',$('#bid').val())">등록</button>
                                             </div>
 
                                         </div>
@@ -651,11 +651,11 @@
                             </div>
                             <div class="cmt_txt_cont">
                                 <div class="cmt_write">
-                                    <label for="cmt_textarea" class="cmt_textarea_label" onclick="$$('.cmt_textarea_label').hide();$$(this).siblings('textarea').focus();" >
+                                    <label for="cmt_textarea" class="cmt_textarea_label" onclick="$('.cmt_textarea_label').hide();$(this).siblings('textarea').focus();" >
                                         타인의 권리를 침해하거나 명예를 훼손하는 댓글은 운영원칙 및 관련 법률에 제재를 받을 수 있습니다.<br>
                                         Shift+Enter 키를 동시에 누르면 줄바꿈이 됩니다.
                                     </label>
-                                    <textarea id="memo_7852633" onfocus="$$('.cmt_textarea_label').hide();" maxlength="400" onKeyup="javascript:reply_length_count(7852633);"></textarea>
+                                    <textarea id="memo_7852633" onfocus="$('.cmt_textarea_label').hide();" maxlength="400" onKeyup="javascript:reply_length_count(7852633);"></textarea>
                                 </div>
                                 <div class="cmt_cont_bottm clear">
                                     <div class="dccon_guidebox">
@@ -835,11 +835,11 @@
 </script>
                     <script type="text/javascript">
                         var _r = _d('Q+yEPMQEQ/u4dMQtdMSuP+UtQ+=FPM=HR/w5PM=6Qou4dgUDdTuEQMqtRMWDdSKK');
-                        $$(document).data('t_vch2', '');
-                        $$(document).data('gallery_id', 'aoegame');
-                        $$(document).data('article_no', '7852633');
-                        $$(document).data('comment_id', 'aoegame');
-                        $$(document).data('comment_no', '7852633');
+                        $(document).data('t_vch2', '');
+                        $(document).data('gallery_id', 'aoegame');
+                        $(document).data('article_no', '7852633');
+                        $(document).data('comment_id', 'aoegame');
+                        $(document).data('comment_no', '7852633');
                         viewComments(1, 'VIEW_PAGE');
                     </script>
                     <!-- 개념글, 수정, 삭제, 글쓰기 버튼 영역-->
@@ -1521,7 +1521,7 @@
                                         <span><a href="javascript:;" onclick="alert('로그인이 필요합니다.')">즐겨찾기<span class="blind">리스트 보기</span><em class="sp_loginout icon_favorites hide"></em></a></span>
 
 
-                                        <span><a class="" href="javascript:;" onclick="alarmList($$('.icon_noti', this), 'new')"><em class="sp_loginout icon_noti "></em>알림</a></span><!-- 신규알림시 클래스 new -->
+                                        <span><a class="" href="javascript:;" onclick="alarmList($('.icon_noti', this), 'new')"><em class="sp_loginout icon_noti "></em>알림</a></span><!-- 신규알림시 클래스 new -->
                                     </div>
 
                                     <!-- 즐겨찾기 리스트 레이어 팝업 -->
@@ -1852,18 +1852,18 @@
         <!-- 본문 좌측 날개 광고 배너 -->
         <div class="stickyunit" style="position:absolute;left:0;top:0;padding:186px 20px 0px 0px;width:120px;height:600px;z-index:1">
             <script>(function(){var b=!1,c="//www.mediacategory.com/servlet/adBanner?from="+escape(document.referrer)+"&s=23222&iwh=120_600&igb=64&cntsr=3&cntad=3",d=function(){b=!0;document.getElementById("mobonDivBanner_23222").innerHTML="<iframe name='ifrad' width='120' height='600' id='mobonIframe_23222' src='"+c+"' frameBorder='0' marginWidth='0' marginHeight='0' scrolling='no' ></iframe>"};try{document.write("<d"+"iv id='mobonDivBanner_23222'></d"+"iv>");var e=setTimeout(d,1E3),f=document.getElementsByTagName("head").item(0),a=document.createElement("script");a.src="//cdn.megadata.co.kr/js/media/1.1/MBSHandler.js";a.type="text/javascript";a.async?a.async=!0:a.defer=!0;a.onload=function(){!0!==b&&(clearTimeout(e),enlipleMBSHandler(enlipleMBSHandler.getProductTypeCode("banner"),enlipleMBSHandler.getWebCode(),23222).createBanner(c,"120","600"))};f.appendChild(a)}catch(g){d()}})();</script>	<script type="text/javascript" charset="utf-8">
-            var stickyTop = $$('.stickyunit').offset().top;       // get initial position of the element
-            $$(window).scroll(function() {                  // assign scroll event listener
-                var currentScroll = $$(window).scrollTop() - 156;
+            var stickyTop = $('.stickyunit').offset().top;       // get initial position of the element
+            $(window).scroll(function() {                  // assign scroll event listener
+                var currentScroll = $(window).scrollTop() - 156;
                 if(currentScroll <= stickyTop){
-                    $$('.stickyunit').css({                      // if you scroll above it
+                    $('.stickyunit').css({                      // if you scroll above it
                         position: 'absolute',
                         top: '0',
                         left: '0',
                         padding: "186px 20px 0px 0px"
                     });
                 }else{
-                    $$('.stickyunit').css({                      // scroll to that element or below it
+                    $('.stickyunit').css({                      // scroll to that element or below it
                         position: "absolute",
                         top: currentScroll,
                         padding: "20px 20px 0px 0px"
@@ -1892,7 +1892,7 @@
                 var dc_adx = {
                     listenMessage: function(e) {
                         try {
-                            var d = $$.parseJSON(e.data);
+                            var d = $.parseJSON(e.data);
                             switch (d.result) {
                                 case 'end':
                                     wif_adx.exitBanner();
@@ -1922,7 +1922,7 @@
     <footer class="dcfoot">
 
         <script type="text/javascript">
-            $$('footer.dcfoot').addClass('type1');
+            $('footer.dcfoot').addClass('type1');
         </script>
 
         <div class="dc_all">
@@ -2090,7 +2090,7 @@
                                             <li data-value="tags">태그</li>
                                         </ul>
                                     </div>
-                                    <script>ul_selectric($$('#f_sch_dccon .select_arraybox'), 'type' , 'title');</script>
+                                    <script>ul_selectric($('#f_sch_dccon .select_arraybox'), 'type' , 'title');</script>
                                     <div class="dccon_search_wrap">
                                         <fieldset>
                                             <legend class="blind">디시콘 검색</legend>

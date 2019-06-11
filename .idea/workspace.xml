@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad88e2cf-a658-4a86-80d3-76b745cff167" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LazyDC/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/_metadata/computed_hashes.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/_metadata/verified_contents.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LazyDC/content_scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/content_scripts.js" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/LazyDC/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/customlib.js" afterDir="false" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+      <change beforePath="$PROJECT_DIR$/LazyDC/customlib.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/customlib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LazyDC/fx.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/fx.js" afterDir="false" />
+>>>>>>> parent of 7f5a846... jquery comment js
       <change beforePath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/fxjs-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LazyDC/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/LazyDC/manifest.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +29,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
+=======
+      <file pinned="false" current-in-tab="true">
+>>>>>>> parent of 7f5a846... jquery comment js
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
+            <state relative-caret-position="868">
+              <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LazyDC/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12864">
+              <caret line="804" column="55" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -42,8 +57,13 @@
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="10512">
               <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
+=======
+            <state relative-caret-position="9952">
+              <caret line="622" column="42" selection-start-line="622" selection-start-column="42" selection-end-line="622" selection-end-column="42" />
+>>>>>>> parent of 7f5a846... jquery comment js
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -119,8 +139,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js">
+        <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="64">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -131,13 +152,18 @@
             <state relative-caret-position="606">
               <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+            <state relative-caret-position="4000">
+              <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
+>>>>>>> parent of 7f5a846... jquery comment js
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
+        <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="6544">
               <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
@@ -150,6 +176,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
               <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+=======
+            <state relative-caret-position="192">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+>>>>>>> parent of 7f5a846... jquery comment js
             </state>
           </provider>
         </entry>
@@ -157,12 +187,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="720">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
 =======
             <state>
               <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+            <state relative-caret-position="208">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+>>>>>>> parent of 7f5a846... jquery comment js
             </state>
           </provider>
         </entry>
@@ -171,12 +206,17 @@
         <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1488">
               <caret line="93" column="57" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="57" />
 =======
             <state relative-caret-position="212">
               <caret line="116" selection-start-line="116" selection-end-line="116" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+            <state relative-caret-position="203">
+              <caret line="88" column="69" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="69" />
+>>>>>>> parent of 7f5a846... jquery comment js
             </state>
           </provider>
         </entry>
@@ -185,12 +225,17 @@
         <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1248">
               <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
 =======
             <state relative-caret-position="606">
               <caret line="136" column="2" selection-start-line="136" selection-start-column="2" selection-end-line="136" selection-end-column="2" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+            <state relative-caret-position="4128">
+              <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
+>>>>>>> parent of 7f5a846... jquery comment js
             </state>
           </provider>
         </entry>
@@ -210,13 +255,30 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <find>filter</find>
+      <find>extend</find>
+      <find>sep</find>
+      <find>mergemap</find>
+      <find>L.entries</find>
+      <find>post</find>
+      <find>user-name</find>
+      <find>postfil</find>
+      <find>split</find>
+      <find>service</find>
+      <find>삭제</find>
+      <find>nick</find>
+      <find>no</find>
+      <find>strong</find>
+      <find>user_info</find>
+>>>>>>> parent of 7f5a846... jquery comment js
       <find>getUR</find>
       <find>float</find>
       <find>cmt_submit</find>
@@ -225,12 +287,14 @@
       <find>formdata</find>
       <find>formadata</find>
       <find>check</find>
+      <find>hi</find>
       <find>&lt;div class=&quot;cmt_write_box clear&quot;&gt;</find>
       <find>image</find>
       <find>_svar</find>
       <find>c2VydmljZV9jb2Rl</find>
       <find>createelement</find>
       <find>createElement</find>
+<<<<<<< HEAD
       <find>title_subje</find>
       <find>section&gt;</find>
       <find>title_subj</find>
@@ -265,6 +329,8 @@
       <find>log</find>
       <find>select</find>
 >>>>>>> parent of 717b15e... 임시저장
+=======
+>>>>>>> parent of 7f5a846... jquery comment js
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,21 +343,24 @@
         <option value="$PROJECT_DIR$/LazyDC/test.html" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/LazyDC/test2.html" />
-        <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
-        <option value="$PROJECT_DIR$/LazyDC/jquery.js" />
-        <option value="$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js" />
         <option value="$PROJECT_DIR$/LazyDC/content_scripts.css" />
+<<<<<<< HEAD
 =======
         <option value="$USER_HOME$/Desktop/WebStromProject/background.js" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
+>>>>>>> parent of 7f5a846... jquery comment js
         <option value="$PROJECT_DIR$/LazyDC/fxjs-dom.js" />
-        <option value="$PROJECT_DIR$/LazyDC/comment.js" />
         <option value="$PROJECT_DIR$/LazyDC/content_scripts.js" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/LazyDC/manifest.json" />
 =======
         <option value="$PROJECT_DIR$/LazyDC/customlib.js" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+>>>>>>> parent of 7f5a846... jquery comment js
       </list>
     </option>
   </component>
@@ -391,11 +460,7 @@
       <workItem from="1560000228553" duration="916000" />
       <workItem from="1560001205713" duration="5540000" />
       <workItem from="1560125323685" duration="445000" />
-      <workItem from="1560127192808" duration="3608000" />
-      <workItem from="1560143752352" duration="4148000" />
-      <workItem from="1560153060539" duration="746000" />
-      <workItem from="1560212186363" duration="1233000" />
-      <workItem from="1560219094161" duration="29000" />
+      <workItem from="1560127192808" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="2.2&#10;&#10;2.3은 빠른글쓰기 예정">
       <created>1559112444709</created>
@@ -404,17 +469,11 @@
       <option name="project" value="LOCAL" />
       <updated>1559112444709</updated>
     </task>
-    <task id="LOCAL-00002" summary="임시저장">
-      <created>1560130509597</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1560130509597</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="154862000" />
   </component>
   <component name="TodoView" selected-index="4">
@@ -433,12 +492,15 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="27725000" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+    <option name="totallyTimeSpent" value="145894000" />
+>>>>>>> parent of 7f5a846... jquery comment js
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1858618" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1858618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +509,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -482,8 +544,7 @@
 <<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.2&#10;&#10;2.3은 빠른글쓰기 예정" />
-    <MESSAGE value="임시저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="임시저장" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.2&#10;&#10;2.3은 빠른글쓰기 예정" />
   </component>
 =======
 >>>>>>> parent of 717b15e... 임시저장
@@ -516,6 +577,16 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 7f5a846... jquery comment js
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -545,35 +616,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4000">
-          <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="183" column="81" selection-start-line="183" selection-start-column="81" selection-end-line="183" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/test2.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="10512">
           <caret line="657" column="162" selection-start-line="657" selection-start-column="144" selection-end-line="657" selection-end-column="162" />
 =======
         <state relative-caret-position="420">
           <caret line="563" column="34" lean-forward="true" selection-start-line="563" selection-start-column="34" selection-end-line="563" selection-end-column="34" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <state relative-caret-position="9952">
+          <caret line="622" column="42" selection-start-line="622" selection-start-column="42" selection-end-line="622" selection-end-column="42" />
+>>>>>>> parent of 7f5a846... jquery comment js
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -631,8 +686,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/jquery-3.2.1.min.js">
+    <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="64">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
@@ -644,11 +700,16 @@
         <state relative-caret-position="606">
           <caret line="136" column="2" selection-start-line="136" selection-start-column="2" selection-end-line="136" selection-end-column="2" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <state relative-caret-position="4000">
+          <caret line="250" column="64" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="64" />
+>>>>>>> parent of 7f5a846... jquery comment js
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/comment.js">
+    <entry file="file://$USER_HOME$/Desktop/WebStromProject/1.1_0/background.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="6544">
           <caret line="409" selection-start-line="392" selection-start-column="4" selection-end-line="409" />
@@ -656,11 +717,16 @@
         <state>
           <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <state relative-caret-position="192">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+>>>>>>> parent of 7f5a846... jquery comment js
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/WebStromProject/background.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="720">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
@@ -680,14 +746,23 @@
         <state relative-caret-position="212">
           <caret line="116" selection-start-line="116" selection-end-line="116" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <state relative-caret-position="208">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+>>>>>>> parent of 7f5a846... jquery comment js
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LazyDC/fx.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="1248">
           <caret line="78" column="5" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
+=======
+        <state relative-caret-position="4128">
+          <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
+>>>>>>> parent of 7f5a846... jquery comment js
         </state>
       </provider>
     </entry>
@@ -698,8 +773,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LazyDC/manifest.json">
+    <entry file="file://$PROJECT_DIR$/LazyDC/fxjs-dom.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="88" column="69" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LazyDC/content_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="128">
           <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
 =======
@@ -720,6 +803,10 @@
         <state relative-caret-position="400">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
 >>>>>>> parent of 717b15e... 임시저장
+=======
+        <state relative-caret-position="868">
+          <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+>>>>>>> parent of 7f5a846... jquery comment js
         </state>
       </provider>
     </entry>

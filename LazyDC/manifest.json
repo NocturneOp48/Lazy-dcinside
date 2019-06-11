@@ -6,8 +6,7 @@
    },
    "content_scripts": [ {
       "css": [ "./content_scripts.css" ],
-      "js": [
-         "./fx.js", "./fxjs-dom.js", "./customlib.js", "./content_scripts.js", "./popup.js" ],
+      "js": ["./fx.js", "./fxjs-dom.js", "./customlib.js", "./content_scripts.js", "./popup.js" ],
       "matches": [ "https://gall.dcinside.com/*" ]
    } ],
    "description": "갤질용 편의기능 제공",
