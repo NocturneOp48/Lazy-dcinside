@@ -117,15 +117,6 @@ UI.rPickConfirm = UI.rPick([
     { name: '시작', type: 'start', value: true }
 ]);
 
-
-
-
-
-const esno = $.val($('#e_s_n_o'));
-
-
-const isIterable = iter => !!iter && iter[Symbol.iterator] ;
-
 const strRplce = str =>
     str == "data-uid" ? "유저 ID" :
         str == "data-ip" ? "유저 IP" :
@@ -482,7 +473,7 @@ const dViewLoad = _ => {
 
                             // 다른 곳을 클릭해서 글 닫기
                             go(
-                                $('#container'),
+                                $('.wrap_inner'),
                                 $.on('click', e => {
                                     $.closest('.gall_list', e.target)
                                     || $('#dlg_position')
