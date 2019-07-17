@@ -1,90 +1,227 @@
 
 
+
 .redBox {border-style:solid; border-width:2px; border-color: red; opacity: 1}
 
-.container {
-
-}
-.head-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-}
-
-.list-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-}
-
-#id-list, #ip-list {
-    display: block;
-    width: 45%;
-    height: 500px;
-    margin: 10px;
+.btn_extension {
+    position:relative;
+    left: 40%;
+    display: inline-block;
+    float: left;
+    border-radius: 3px;
+    background-color: #e7e7e7;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
     text-decoration: none;
-
+    font-size: 10px;
+    line-height: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    font-family: "Nanum Gothic san-serif";
 }
-#rpick-list {
+
+#dView.on {
+    background-color: black;
+    color:white;
+    font-size: 6px;
+}
+
+
+.directMemobox {
+    width: 620px !important;
+}
+
+/* dcs_dialog */
+#dcs_dialog {
+    /*position : absolute;*/
+    top: 100%;
+    left: 0%;
+    opacity: 0;
+    width: 840px;
+    overflow-y: visible;
+    background: white;
+    z-index: 999;
+}
+
+
+#dcs_dialog .btn_recommend_box {
+    display:none
+}
+
+#dcs_dialog .cmt_info {
+    overflow: hidden;
+}
+
+#dcs_dialog .cmt_write_box > .fl {
+    width: 15%;
+}
+
+#dcs_dialog .cmt_list .fr {
+    width: 106px;
+}
+
+#dcs_dialog .cmt_txtbox {
     width: 60%;
-    height: 300px;
-    font-size: 16px;
 }
 
-#win {
-    font-family: Helvetica, san-serif;
-    margin: 10px;
+#dcs_dialog .cmt_txtbox p{
+    width: 500px;
+}
+
+#dcs_dialog .reply .cmt_write_box.small .cmt_txt_cont textarea{
+    width: 600px;
+}
+
+#dcs_dialog #div_con .off {
+    display:none;
+}
+
+
+
+#dcs_dialog::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+#dcs_dialog::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #fff;
+}
+#dcs_dialog::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #c0c0c0;
+}
+
+
+/*  removing bottom side ad, except kakao player */
+.gallview_contents iframe {
+    display: none;
+}
+
+.gallview_contents iframe[src^=http] {
+    display: block;
+}
+
+.gallview_contents .con_banner {
+    display: none !important;
+}
+
+
+
+
+
+
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 15;
+}
+.confirm .body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40%;
+    height: 70%;
+    background: #fff;
+    border-radius: 8px;
     text-align: center;
 }
 
-
-.quickView:hover {
-    background-color: transparent;
-}
-
-.quickView .writing_view_box {
-    text-align: left;
-    width: 90%;
-    font-size: 12px;
-}
-
-
-
-.cmt_write_box {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    height: 100px;
-}
-
-.id_pw_items {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-}
-
-.cmt_write {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    flex-grow:10;
-}
-
-.cmt_write #cmt_text {
-    height: 100%;
-    flex-grow:8;
-}
-
-.cmt_write #cmt_submit {
-
-    border: 2px outset white;
-    text-align: center;
-    font-size:10px;
-    color: white;
-    background-color: #3c4790;
-    flex-grow: 1;
+.confirm .body #user_list {
+    width: 70%;
     height: 60%;
-
+    font-family: Nanum Gothic san-serif;
+    font-size:12px;
 }
 
+.confirm .msg {
+    padding: 0 24px;
+    margin : 5%;
+    font-size: 16px;
+    font-family: Nanum Gothic san-serif;
+}
+.confirm button {
+    padding: 8px;
+    width: 60px;
+    border: 0;
+    background: #eee;
+    border-radius: 8px;
+    margin: 3px;
+    font-family: Nanum Gothic san-serif;
+    font-size: 7px;
+}
+.confirm button.ok {
+    border: 0;
+    color: #fff;
+    background: #000;
+}
+
+
+.spinner {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+    position:relative;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    width: 25px;
+    height: 25px;
+}
+.spinner .path {
+    stroke: gray;
+    stroke-linecap: round;
+    -webkit-animation: dash 1.5s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

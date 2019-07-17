@@ -2,18 +2,17 @@
    "browser_action": {
       "default_icon": "icon.png",
       "default_popup": "popup.html",
-      "web_accessible_resources": [ "./content_scripts.css" ]
+      "web_accessible_resources": [ "*" ]
    },
    "content_scripts": [ {
       "css": [ "./content_scripts.css" ],
-      "js": ["./fx.js", "./fxjs-dom.js", "./customlib.js", "./content_scripts.js", "./popup.js" ],
+      "js": ["./anime.min.js", "./fx.js", "./fxjs-dom.js", "./customlib.js", "./content_scripts.js"],
       "matches": [ "https://gall.dcinside.com/*" ]
    } ],
    "description": "갤질용 편의기능 제공",
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmayM0Y2K9EzmChP3huT/NL+OlaXpeUgbTjKmYUsYeS6fNelpI0vFNLAV3IpHgc5o706aQaMGLcSIOJASGdJQsznIQgX+t6ZkR6CyVRLn1uDAAzwjmSZeJVVZvG2EFI/a7s30qKkWQAAcZLsWyIz7sq76wKOxuGZAzFLs+ksI2vM95m45wzX8i5MfRaL8ygSYoJLcdJxIFH7BgrExkU7nATD3710DnPVWRPfRFTVHrCNI7fg1yJ+yiGG5PKD6ps3YSSJMjFJxemprX4o9Z1hUQkcKl6Ukyyy8+8RLYVLyiAazWaP6T+HGgS9EwKc7iSoOlgCbWB8piEuWQQA6e1f/WwIDAQAB",
    "manifest_version": 2,
-   "name": "Lazy dc-inside",
+   "name": "dc add-on",
    "permissions": [ "storage", "https://gall.dcinside.com/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1"
+   "version": "1.00"
 }

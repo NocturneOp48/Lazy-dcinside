@@ -91,6 +91,8 @@ $.el = html => {
 
 $.append = curry((parent, child) => parent.appendChild(child));
 
+$.appendr = curry((child, parent) => (parent.appendChild(child), parent));
+
 $.prepend = curry((parent, child) => parent.insertBefore(child, parent.firstChild));
 
 $.before = curry((after, before) => after.parentNode.insertBefore(before, after));
@@ -230,7 +232,10 @@ const
     resJSON = res => res.ok ? go(res, text, JSON.parse) : Promise.reject(res),
 
   fetchBaseOpt = {
-      // headers: {"Content-Type": "application/json", 'Access-Control-Allow-Credentials' : true},
+      headers: {"Content-Type": "application/json",
+          'Access-Control-Allow-Credentials' : true,
+          // mode: "no-cors"
+      },
       credentials: 'same-origin'
   },
 
@@ -246,7 +251,7 @@ const
       resJSON));
 
 
-$.get = (url, data, headers = new Headers({"Accept":"text/html"})) => go(
+$.get = (url, data, headers = new Headers({"Accept":"text/html", "async":"false"})) => go(
     fetch(  url + (data === undefined ? '' : '?' + $.param(data)), fetchBaseOptF(headers)),
     res => res.ok ? res.text() : Promise.reject(res)
 );
