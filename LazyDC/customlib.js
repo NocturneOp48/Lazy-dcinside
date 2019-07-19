@@ -391,32 +391,17 @@ const dViewLoad = _ => {
                         ct,
                         postLoad,
                         ([post, cmt]) => {
+
+
                             Imgsloader(3)(post);
-
                             $.append(dialog, post);
-                            //$.animate({'top': top, 'left' : left, 'opacity' : 1}, dialog);
                             $.animate({'top': 0, 'opacity' : 1}, dialog);
-                            
-
-
-
                             $.append(dialog, $.el(`<a id="dcs_viewComment" href="javascript:viewComments(1, 'VIEW_PAGE')"></a>`));
                             $.append(dialog, cmt);
 
 
                             setTimeout(function() {
-                                dialog.append($.el(`<iframe id="dcs_iframe" style="display: none;" src=${targetHref}></iframe>`))
-                                go(
-                                    $('#dcs_iframe'),
-                                    $.on('load', e => {
-                                    const iframe = document.querySelector('#dcs_iframe').contentDocument.body;
-                                    const script = document.createElement('script');
-                                    script.type = "text/javascript";
-                                    script.innerHTML = `window.alert = function () {}; window.confirm = function() {};`;
-                                    iframe.prepend(script);
-                                }
-                                    )
-                                )
+                                dialog.append($.el(`<iframe id="dcs_iframe" style="display: none;" src=${targetHref}></iframe>`));
                             }, 0);
 
 
@@ -445,47 +430,17 @@ const dViewLoad = _ => {
                             setTimeout(filtering, 300);
 
                             go(
-                                $("textarea[id^=\"memo\"][class^=\"directMemobox\"]"),
-                                $.on('keydown', e => {
-                                    const {keyCode} = e;
+                                $("textarea[class^=\"directMemobox\"]"),
+                                $.on('keydown', ({keyCode}) => {
                                     keyCode == 13 &&
-                                    stopAnchor(e) && $.trigger('click', $('.dcs_replyButton'));
+                                    $.trigger('click', $('.dcs_replyButton'));
 
                                 })
                             );
 
 
-
-                            // esc로 글 닫기
                             go(
-                                docEl,
-                                $.on('keydown', e => {
-
-                                    const {keyCode} = e;
-
-                                    keyCode == '27' &&
-                                    $('#dlg_position') &&
-                                    $.remove($('#dcs_dialog')) &&
-                                    $.remove($('#dlg_position'));
-                                })
-
-                            );
-
-                            // 다른 곳을 클릭해서 글 닫기
-                            go(
-                                $('.wrap_inner'),
-                                $.on('click', e => {
-                                    $.closest('.gall_list', e.target)
-                                    || $('#dlg_position')
-                                    && $.remove($('#dcs_dialog'))
-                                    && $.remove($('#dlg_position'));
-                                })
-                            );
-
-
-
-                            go(
-                                docEl,
+                                $('#dcs_dialog'),
                                 $.delegate('click', '.tx_dccon', e => {
 
                                     $('#div_con') ?
@@ -493,10 +448,16 @@ const dViewLoad = _ => {
                                         go(
                                             $('#dcs_iframe').contentDocument.body,
                                             $.find('#div_con'),
-                                            $.append($('.dccon_guidebox')
-                                            )
+                                            $.append($('.dccon_guidebox'))
                                         );
 
+                                })
+                            );
+
+                            dViewMode && go(
+                                $('.dcs_replyButton'),
+                                $.on('click', e => {
+                                    commentUsingIframe();
                                 })
                             );
 
@@ -514,19 +475,36 @@ const dViewLoad = _ => {
 
 
 
-
-    dViewMode && go(
-        docEl,
-        $.delegate('click', '.dcs_replyButton', e => {
-            bypassSubmitComment();
-            go($('#dcs_dialog'), el => el.parentNode, $.focus);
+    // 다른 곳을 클릭해서 글 닫기
+    go(
+        $('.wrap_inner'),
+        $.on('click', e => {
+            $.closest('.gall_list', e.target)
+            || $('#dlg_position')
+            && $.remove($('#dcs_dialog'))
+            && $.remove($('#dlg_position'))
+            && $.setScrollTop($.offset($('.page_head')).top);
         })
     );
 
-    const bypassSubmitComment = _ => {
+
+    // esc로 글 닫기
+    go(
+        docEl,
+        $.on('keydown', e => {
+            const {keyCode} = e;
+            keyCode == '27' &&
+            $('#dlg_position') &&
+            $.remove($('#dcs_dialog')) &&
+            $.remove($('#dlg_position'));
+        })
+    );
+
+
+    const commentUsingIframe = _ => {
         const id = $("input[id^='name']");
         const pw = $("input[id^='password']");
-        const text = go( $("textarea[id^=\"memo\"]"), $.val, val => val.toString());
+        const text = go($(".cmt_write_box textarea[class^=\"directMemobox\"]"), $.val, val => val.toString());
 
         const iframeContents = $('#dcs_iframe').contentDocument.body;
 
@@ -538,11 +516,12 @@ const dViewLoad = _ => {
             tap($.find("input[id^='password']"), $.setVal(go(pw, $.val, val => val.toString()))),
         )
 
-        go(iframeContents,
-            tap($.find('textarea'), $.setVal(text)),
-            tap($.find('.comment_count'), el => $.trigger('click', el)),
-            tap($.find('.btn_blue.btn_svc.small.repley_add'), el => $.trigger('click', el))
-        );
+
+
+        go(iframeContents, $.find('.cmt_write_box textarea'), el => (el.focus(), el), $.setVal(text));
+        go(iframeContents, $.find('.comment_count'), el => $.trigger('click', el));
+        go(iframeContents, $.find('.btn_blue.btn_svc.small.repley_add'), el => $.trigger('click', el));
+
 
         $('#dcs_viewComment').click();
         setTimeout(filtering, 300);
