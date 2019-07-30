@@ -285,6 +285,7 @@
 .random .container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 .random .container .user-item {
