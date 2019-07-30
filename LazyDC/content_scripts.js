@@ -48,6 +48,8 @@ topMenu(["directView", "filter", "edit", "rPick"]) || btmMenu(["filter", "edit",
 !function gallLoad() {
 
 
+    testURI('id', document.location.href) && testURI('no', document.location.href) || commentScript();
+
     testURI('s_type', document.location.href) || testURI('no', document.location.href) ||  go(
         $('.page_head > .fl a'),
         $.on('click', e => {

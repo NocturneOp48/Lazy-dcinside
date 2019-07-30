@@ -82,10 +82,11 @@ UI.confirm = UI.message([
 
 UI.rPick = curry((btns, msg, before = a => a, after = a => a) => new Promise(resolve => go(
     `
-    <div class="confirm">
+    <div class="random">
       <div class="body">
         <div class="msg">${msg}</div>
-        <textarea id="user_list"></textarea>
+        <div class="container"></div>
+        <input type="text" id="input_user"><button id="submit">추가</button>
         <div class="buttons">
           ${strMap(btn => `
             <button type="button" class="${btn.type}">${btn.name}</button>
@@ -99,12 +100,11 @@ UI.rPick = curry((btns, msg, before = a => a, after = a => a) => new Promise(res
     tap(before),
     tap(
         $.find('.start'),
-        $.on('click', ({currentTarget}) => go(currentTarget, $.closest('.confirm'), hi, after))
-    ),
+        $.on('click', ({currentTarget}) => go(currentTarget, $.closest('.random'), after))),
     $.find('.cancel'),
     $.on('click', e => go(
         e.currentTarget,
-        $.closest('.confirm'),
+        $.closest('.random'),
         $.remove,
         _ => resolve(false)
         )
@@ -113,9 +113,12 @@ UI.rPick = curry((btns, msg, before = a => a, after = a => a) => new Promise(res
 );
 
 UI.rPickConfirm = UI.rPick([
-    { name: '취소', type: 'cancel', value: false },
+    { name: '종료', type: 'cancel', value: false },
     { name: '시작', type: 'start', value: true }
 ]);
+
+
+const usrItmBtn = user => $.el(`<button class="user-item" user="${user}">${user}<div class="remove">X</div></button>`)
 
 const strRplce = str =>
     str == "data-uid" ? "유저 ID" :
@@ -302,29 +305,44 @@ const rPickView = async ({currentTarget: ct}) => {
 
         ),
         array => new Set(array),
-        set => (set.delete("댓글돌이"), set)
+        set => (set.delete("댓글돌이"), set),
+        L.map(usrItmBtn)
     );
 
+    const inputUser = _ => go( $('#input_user'), tap($.val, usrItmBtn, $.append($('.container'))),
+                                    $.setVal(''));
 
-    const listFill = pipe($.find('#user_list'),
-        $.setVal([...nicknames].join(', '))
+
+
+    const listFill = tap($.find('.container'),
+        $.delegate('click', '.user-item', ({currentTarget}) => {
+            go(currentTarget, $.closest('.user-item'), $.remove)
+        }),
+        tap(
+            _ => $('#submit'),
+            $.on('click', inputUser)),
+        tap(
+          _ => $('#input_user'),
+          $.on('keydown', ({keyCode}) => {
+              keyCode == '13' && inputUser();
+          })),
+        container => map($.append(container), nicknames),
     );
+
+    // 추가
+
 
     const start = el => go(el,
-            $.find('#user_list'),
-            $.val,
-            splitext(', '),
+            $.findAll('.user-item'),
+            map($.attr('user')),
             randomArray,
-            winner => `<div id="win">당첨자는 ${winner}입니다.</div>`,
+            winner => `<div id="win"> 결과 : ${winner}  </div>`,
             $.el,
-            $.after($.find('#user_list', el))
+            $.after($.find('.container', el))
         );
 
 
     await UI.rPickConfirm("추첨목록", listFill, start);
-
-    filtering();
-
 
 };
 
@@ -341,9 +359,6 @@ const dView = e => {
 };
 
 const dViewLoad = _ => {
-
-
-    commentScript();
 
     const postHTML = html => new RegExp('(<div class="view_content_wrap">[\\w\\W\\s."]*)<!-- 댓글 -->').exec(html)[1] || null;
     const lazyImg = str => str.replace(/img src=/gi, "img src=_ class=\"fade\"  lazy-src=");
@@ -402,7 +417,7 @@ const dViewLoad = _ => {
 
                             setTimeout(function() {
                                 dialog.append($.el(`<iframe id="dcs_iframe" style="display: none;" src=${targetHref}></iframe>`));
-                            }, 0);
+                            }, 1000);
 
 
 
