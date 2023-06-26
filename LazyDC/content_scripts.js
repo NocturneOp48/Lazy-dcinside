@@ -56,10 +56,10 @@ topMenu(["directView", "filter", "edit", "rPick"]) || btmMenu(["filter", "edit",
 
             $('#dlg_position') && $.remove($('#dcs_dialog')) && $.remove($('#dlg_position'));
             $.append($('.page_head > .fl'), $.el(loading));
-            setTimeout(_ => $('#spin_loading') && window.location.reload(), 3000);
+            //setTimeout(_ => $('#spin_loading') && window.location.reload(), 3000);
             stopAnchor(e);
             const {currentTarget: ct} = e;
-            const gallList = html => new RegExp('<table class="gall_list">([\\w\\W\\s."]*)<\\/table>').exec(html)[1] || null;
+            const gallList = html => new RegExp('<table class="gall_list(?:[\\s]*">)([\\w\\W\\s."]*)<\\/table>').exec(html)[1] || null;
             const gallListLoad = pipe(get, gallList);
             const targetHref = $.attr('href', ct);
             history.replaceState({data : 'replace'}, 'title', targetHref);

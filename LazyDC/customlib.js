@@ -346,6 +346,17 @@ const rPickView = async ({currentTarget: ct}) => {
 
 };
 
+// 특정 갤에서만 유동 차단
+// true, false가 아니라 갤러리명만을 스토리지에 저장해놔야함
+// var udongBanMode = new Set(JSON.parse(localStorage.getItem('udongBanGall'))));
+// const udongBanToggle = _ => udongBanMode[testURI()] ? go($('#udongBan'), $.addClass('on')) : go($('#udongBan'), $.removeClass('on'));
+// const udongBan = e => {
+//     udongBanMode = udongBanMode;
+//     localStorage.setItem('udongBanGall', JSON.stringify(udongBanMode));
+//     udongBanToggle();
+// };
+
+
 
 var dViewMode = !!(JSON.parse(localStorage.getItem('dViewMode')));
 
@@ -362,13 +373,13 @@ const dViewLoad = _ => {
 
     const postHTML = html => new RegExp('(<div class="view_content_wrap">[\\w\\W\\s."]*)<!-- 댓글 -->').exec(html)[1] || null;
     const lazyImg = str => str.replace(/img src=/gi, "img src=_ class=\"fade\"  lazy-src=");
-    const cmtHTML = html => new RegExp('(<div class=\"view_comment\">[\\w\\W\\s."]*)<script id=\"reply-setting-tmpl\"').exec(html)[1] || null;
+    const cmtHTML = html => new RegExp('(<div class="view_comment" id="focus_cmt">[\\w\\W\\s."]*)<script id=\"reply-setting-tmpl\"').exec(html)[1] || null;
 
     const dialogtml = `<div id="dcs_dialog" click="${stopAnchor}"></div>`;
     const dlgps = `<tr id="dlg_position"></tr>`;
 
-    const postView = pipe(postHTML, lazyImg, $.el);
-    const cmtView = pipe(cmtHTML, $.el);
+    const postView = pipe(postHTML, hi, lazyImg, $.el);
+    const cmtView = pipe(cmtHTML, hi, $.el);
 
     const postLoad = pipe(get, html => [postView(html), cmtView(html)]);
 
